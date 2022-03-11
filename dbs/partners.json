@@ -1,0 +1,21 @@
+{
+    "partner1" : [
+        {"name" : "partners1"},
+        {"name" : "partners2"},
+        {"name" : "partners3"},
+        {"name" : "partners4"},
+        {"name" : "partners5"},
+        {"name" : "partners6"},
+        {"name" : "partners7"},
+        {"name" : "partners8"}
+    ],
+    "partner2" : [
+        {"name" : "partners9"},
+        {"name" : "partners10"},
+        {"name" : "partners11"},
+        {"name" : "partners12"},
+        {"name" : "partners13"},
+        {"name" : "partners14"},
+        {"name" : "partners15"}
+    ]
+}

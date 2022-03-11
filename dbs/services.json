@@ -1,0 +1,51 @@
+{
+    "data" : [
+        {
+            "picNum" : "pagePic2_1",
+            "title" : "Project management",
+            "text" : "Our fundamental service. Something that distinguishes us from the competition, and which all of our clients recognize is our project management. The engine of our company."
+        },
+        {
+            "picNum" : "pagePic2_2",
+            "title" : "Antenna and Line installation",
+            "text" : "The most of our experience lay here. Something we know better than most of our competitors."
+        },
+        {
+            "picNum" : "pagePic2_3",
+            "title" : "Drone audits",
+            "text" : "New technology? We are already there. Always finding new implementations for our clients benefit."
+        },
+        {
+            "picNum" : "pagePic2_4",
+            "title" : "Testing & Integration",
+            "text" : "Simple and straightforward. Precision and deep knowledge allow us to do the project right the first time."
+        },
+        {
+            "picNum" : "pagePic2_5",
+            "title" : "Education and Training",
+            "text" : "3 week long course built by our professionals. We introduce new people to the industry and we do it with class. In our 3 week long course, we introduce individuals to the growing industry. By giving them the skills and knowledge to build upon their career we pride ourselves in producing individuals ready to work."
+        },
+        {
+            "picNum" : "pagePic2_6",
+            "title" : "Microwave services",
+            "text" : "Hundreds of microwave projects successfully completed by our team allow us to confidently state - “We are the best."
+        },
+        {
+            "picNum" : "pagePic2_7",
+            "title" : "Small Cell",
+            "text" : "Small Cell is a base of on the way to 5G. We are always in vanguard; this is not an exception. The basis of 5G will be build upon the 4G infostructure. As with all aspects of Belazor Technologies Inc we pride ourselves in being in the forefront of small cell technology."
+        },
+        {
+            "picNum" : "pagePic2_8",
+            "title" : "Maintenance & Troubleshooting",
+            "text" : "Experience, understanding and background allow us to be the first choice."
+        },
+        {
+            "picNum" : "pagePic2_9",
+            "title" : "Civil & Electrical services",
+            "text" : "Licensed, insured and knowledgeable. Our civil crews are always accessible."
+        }
+    ]
+}
+
+
