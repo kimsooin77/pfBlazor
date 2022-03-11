@@ -1,0 +1,172 @@
+.contactUs {
+    width: 100%; background: #fa0; position: relative; 
+    .page7Top {
+        width: 100%; z-index: 1; position: absolute; top: 0;
+        img {width: 100%; height: 100%;}
+    }
+    .inner {
+        width: 1024px; position: relative; margin: 0 auto; padding: 250px 0 150px;
+
+        .contactsTxt {
+            width: 50%; transform: translate(-60px,70px); opacity: 0; transition: 0.5s;
+
+            &.eventOn {opacity: 1; transform: translate(-60px, -30px);}
+
+            h4 {
+                font: bold 14px/50px "Barlow Condensed"; letter-spacing: 5px; margin-bottom: 21px;
+            }
+            h1 {
+                font: bold 35px/55px "Barlow Condensed"; letter-spacing: 3px; margin-bottom: 25px;
+            }
+            p {
+                width: 90%; margin-bottom: 30px;
+                font: normal 13px/30px "Open Sans"; letter-spacing: 1px;
+            }
+            .list {
+                display: flex; flex-direction: column; justify-content: center;
+                span {
+                    font: bold 13px/30px "Barlow Condensed"; letter-spacing: 4px;
+                    cursor: pointer; overflow: hidden; position: relative;
+                    width: 160px; margin-bottom: 10px;
+
+                    &:nth-of-type(2) {width: 125px; }
+                    &::after {
+                        content: ""; width: 100%; height: 2px; margin-top: 1px; position: absolute; left: 0;
+                        bottom: 0; background: #000; transform: translateX(-110%);
+                    }
+                    &:hover {
+                        &::after {
+                            transform: translateX(110%); transition: transform 0.7s ease-in-out;
+                        }
+                    }
+                }
+                ul { 
+                    display: flex; flex-direction: row; font: bold 13px/30px "Barlow Condensed"; letter-spacing: 4px;
+                    
+                    li {
+                        color: #000; position: relative; overflow: hidden; cursor: pointer;
+
+                        
+                        &:nth-of-type(3)::after {
+                            display: none;
+                        }
+
+                        &::after {
+                            content: "/";  display: inline-flex; padding: 0 10px;
+                        }
+
+                        &::before {
+                            content: ""; width: 100%; border-bottom: 2px solid; display: block; position: absolute;
+                            bottom: 0; left: 0; transform: translateX(-110%); background: #000; margin-top: 2px;
+                        }
+                        &:hover {
+                            &::before {
+                                transform: translateX(110%); transition: transform 0.7s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        form {
+             width: 40%; background: #1e1541; color: #fff; padding: 120px 90px 80px;
+            position: absolute; right: -100px; top: 0; z-index: 10;
+            
+            fieldset {
+                border: none; width: 100%;
+
+                legend {
+                    font: bold 40px/55px "Barlow Condensed"; letter-spacing: 3px; margin-bottom: 40px;
+                }
+                
+                table {
+                    width: 100%;
+                    
+                    input[type=text],input[type=email], textarea {
+                        height: 70px; font: normal 14px "Barlow Condensed";
+                        letter-spacing: 4px; width: 100%; outline: none; box-sizing: border-box;
+                        margin-bottom: 30px; background: #1e1541;color: #fff; border: none;
+                        border-bottom: 1px solid rgba(187, 187, 187, 0.315); padding: 20px;
+                    }
+                    textarea {
+                       height: 100px; margin-top: 20px;
+                    }
+                    input[type=submit] {
+                        cursor: pointer;  border: none;
+                        margin-top: 60px; width: 100%; height: 50px; background: #fa0;
+                        border-radius: 30px; font: bold 14px/50px "Barlow Condensed";
+                        transition: 0.5s;
+                        letter-spacing: 3px; color: #191136; text-align: center; display: block;
+                        
+                        &:hover {background: #fff;}
+                    }
+                    .pop {
+                        margin-top: 7px;
+                        h1 {
+                            width: 110%; font: bold 25px/1.8 "Barlow Condensed"; letter-spacing: 0.7px;
+                        }
+                        .close {
+                            outline: none; border: none; padding: 10px; background: #1e1541;
+                            color: #fff; text-align: right; width: 100%; cursor: pointer; transition: 0.3s;
+                            &:hover{transform: scale(1.1);}
+                        }
+                    }
+
+                    .err {
+                        display: block; transform: translateY(-8px);
+                        font: normal 12px/1 "Barlow Condensed"; text-align: left; color: #fa0;
+                    }
+                }
+                
+            }
+        }
+        #map {
+            width: 300px; height: 300px; filter:drop-shadow(5px 5px 5px #1e1541);
+            margin-top: 50px; margin-left: -62px;
+        }
+    }
+}
+
+@media screen and(max-width : 1223px) {
+    .contactUs {
+        width: 100%; background: #fa0; position: relative; 
+        .page7Top {
+            width: 100%; z-index: 1; position: absolute; top: 0;
+            img {width: 100%; height: 100%;}
+        }
+        .inner {
+            width: 568px; 
+    
+            .contactsTxt {
+                width: 100%; 
+                &.eventOn {transform: translate(0px,-30px);}
+            }
+    
+            form {
+                 width: 70%; margin-top: 50px; 
+                position: relative; right: auto; top: auto; z-index: 10;
+            }
+            #map {
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 660px) {
+    .contactUs {
+        
+        .inner {
+            width: 90%; 
+    
+            .contactsTxt {
+                width: 100%; transform: translateX(0px);
+            }
+    
+            form {
+                 width: 50%;
+            }
+        }
+    }
+}

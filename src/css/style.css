@@ -1,0 +1,1870 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Open+Sans:wght@300&display=swap");
+.loadState {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffaa00; }
+  .loadState .preLoadBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191136;
+    z-index: -1; }
+  .loadState .preContent {
+    width: 400px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .loadState .preContent img {
+      width: 100px;
+      height: 100px; }
+    .loadState .preContent .logotxt {
+      color: #fff;
+      width: 200px;
+      padding-left: 30px; }
+      .loadState .preContent .logotxt h2 {
+        font-size: 30px;
+        line-height: 25px; }
+      .loadState .preContent .logotxt p {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px; }
+      .loadState .preContent .logotxt span {
+        font-size: 12px;
+        display: block;
+        line-height: 12px;
+        font-weight: 300;
+        margin-top: -1px; }
+  .loadState .preOveray {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background: orange;
+    left: 0;
+    transform: translateY(-20px);
+    transform: translate(-100%, -20px);
+    transition: transform 1.5s ease-in-out; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  overflow-X: hidden;
+  box-sizing: border-box; }
+
+.h {
+  opacity: 0;
+  text-indent: -9999px; }
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/public/pic/headerBgPic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  z-index: 0; }
+  header .cloud {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; }
+    header .cloud::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 100%;
+      overflow: hidden;
+      background-image: url(/public/pic/cloud1.png);
+      background-position: center;
+      background-repeat: repeat;
+      background-size: contain;
+      animation: cloud 60s linear 0s infinite alternate; }
+    header .cloud::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 100%;
+      background-size: contain;
+      background-image: url(/public/pic/cloud2.png);
+      background-repeat: repeat;
+      background-position: center;
+      animation: cloud 25s linear 0s infinite alternate; }
+  header .headerMenu {
+    z-index: 10;
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    display: flex; }
+    header .headerMenu > li {
+      margin-left: 40px;
+      color: #fff;
+      font: bold 15px/1 "Barlow Condensed";
+      letter-spacing: 2.1px;
+      padding-bottom: 4px;
+      position: relative;
+      overflow: hidden;
+      width: 86px;
+      cursor: pointer; }
+      header .headerMenu > li:nth-of-type(1) {
+        margin-left: 0; }
+      header .headerMenu > li::after {
+        content: "";
+        display: block;
+        background: #fff;
+        width: 100%;
+        border-bottom: 2px solid;
+        transform: translateX(-110%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-top: 2px; }
+      header .headerMenu > li .sub {
+        background-color: #221852;
+        margin-top: 22px;
+        padding: 8px;
+        opacity: 0;
+        text-align: center;
+        font-size: 13px;
+        position: relative;
+        transition: 0.3s;
+        transform: translateY(50px);
+        cursor: default; }
+        header .headerMenu > li .sub ul li {
+          margin-bottom: 5px; }
+        header .headerMenu > li .sub::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: -12px;
+          left: 24px;
+          border: 12px solid transparent;
+          border-top-width: 0;
+          border-bottom-color: #221852; }
+      header .headerMenu > li:hover {
+        color: #f8b5f8; }
+        header .headerMenu > li:hover .sub {
+          opacity: 1;
+          transform: translateY(0px);
+          color: #fff;
+          z-index: 2; }
+          header .headerMenu > li:hover .sub ul li:hover {
+            cursor: pointer;
+            color: #f8b5f8; }
+  header .inner {
+    width: 1024px;
+    margin: 0 auto;
+    height: 290px;
+    transform: translateY(330px);
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transition: 1s; }
+    header .inner .txtBox {
+      width: 512px; }
+      header .inner .txtBox h4 {
+        font: bold 14px/50px "Barlow Condensed";
+        letter-spacing: 5px;
+        color: #fff; }
+      header .inner .txtBox h1 {
+        padding-top: 21px;
+        font: 36px/36px "Barlow Condensed";
+        letter-spacing: 6px;
+        color: #fff;
+        margin-bottom: 25px; }
+      header .inner .txtBox p {
+        color: #fff;
+        font: normal 16px/28px "Open Sans";
+        font-weight: 300;
+        letter-spacing: 1px; }
+    header .inner.eventOn {
+      opacity: 1;
+      transform: translateY(230px); }
+  header .badge {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 70px;
+    bottom: 50px;
+    z-index: 99; }
+    header .badge img {
+      width: 100%;
+      height: 100%; }
+  header .duckPic {
+    position: absolute;
+    bottom: 0;
+    top: calc(100vh - 250px);
+    width: 640px;
+    height: 270px;
+    right: 0;
+    z-index: 97; }
+  header::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #191136;
+    opacity: 0.5;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%; }
+  header .headerBottom {
+    width: 100%;
+    display: block;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%); }
+    header .headerBottom img {
+      width: 100%; }
+
+@keyframes cloud {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-100vw); } }
+@media screen and (max-width: 1223px) {
+  header .headerMenu {
+    opacity: 0;
+    top: -9999px; }
+  header .inner {
+    width: 568px; }
+    header .inner .txtBox {
+      width: 80%; }
+  header .badge {
+    left: 30px;
+    bottom: 30px; }
+  header .duckPic {
+    position: absolute;
+    bottom: 30px;
+    top: calc(100vh - 250px);
+    width: 540px;
+    height: 200px;
+    right: 0;
+    z-index: 97; } }
+@media screen and (max-width: 660px) {
+  header .inner {
+    width: 90%;
+    transform: translateY(130px); }
+    header .inner .txtBox {
+      width: 100%; }
+  header .badge {
+    left: 15px;
+    bottom: 15px;
+    width: 70px;
+    height: 70px; }
+  header .duckPic {
+    position: absolute;
+    bottom: 0px;
+    width: 340px;
+    height: 150px;
+    right: 0;
+    z-index: 97; }
+    header .duckPic img {
+      width: 100%;
+      height: 100%; } }
+.popUp {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  display: none; }
+  .popUp .inner {
+    width: 350px;
+    box-sizing: border-box;
+    background-color: #fa0;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    transform: translateY(150px); }
+    .popUp .inner .logoPic {
+      width: 80px;
+      position: absolute;
+      top: -31px;
+      left: 50%;
+      transform: translateX(-50%) rotate(20deg); }
+    .popUp .inner h1 {
+      font: bold 30px/1.8 "Barlow Condensed";
+      letter-spacing: 1px;
+      margin: 10px auto; }
+    .popUp .inner span {
+      display: block;
+      width: 93%;
+      margin: 0 auto;
+      margin-top: 10px;
+      font: normal 15px/1.5 "Open Sans"; }
+    .popUp .inner .closeBtn {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s; }
+      .popUp .inner .closeBtn:hover {
+        color: #1e1541; }
+    .popUp .inner .wrap {
+      margin-top: 20px; }
+      .popUp .inner .wrap label {
+        margin-left: 15px;
+        font: normal 14px/1 "Barlow Condensed"; }
+  .popUp.on {
+    display: block; }
+  .popUp.off {
+    display: none; }
+
+.services {
+  padding: 200px 0 0;
+  position: relative;
+  background: var(--bgColor);
+  width: 100%;
+  transition: all 0.6s;
+  color: var(--textColor);
+  --bgColor: #fff;
+  --textColor: #000; }
+  .services.dark {
+    --bgColor: #191136;
+    --textColor: #fff; }
+  .services .inner {
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 40px; }
+    .services .inner .textbox {
+      margin-bottom: 100px;
+      max-width: 50%;
+      position: relative;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: 0.5s; }
+      .services .inner .textbox.eventOn {
+        opacity: 1;
+        transform: translateY(0px); }
+      .services .inner .textbox h4 {
+        font: bold 14px/50px "Barlow Condensed";
+        letter-spacing: 5px; }
+      .services .inner .textbox h1 {
+        padding-top: 21px;
+        font: normal 36px/40px "Barlow Condensed";
+        letter-spacing: 5px;
+        padding-bottom: 25px;
+        font-weight: 500; }
+      .services .inner .textbox p {
+        font: normal 16px/28px "Open Sans";
+        font-weight: 300;
+        letter-spacing: normal; }
+      .services .inner .textbox .blueDot {
+        position: absolute;
+        top: 63px;
+        left: -30px;
+        width: 81px;
+        height: 39px;
+        z-index: -1; }
+        .services .inner .textbox .blueDot img {
+          width: 100%;
+          height: 100%; }
+      .services .inner .textbox .orangeDot {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 222px;
+        left: 140px;
+        z-index: -1; }
+        .services .inner .textbox .orangeDot img {
+          width: 100%;
+          height: 100%; }
+    .services .inner .theme {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      transform: translateY(-300px); }
+      .services .inner .theme button {
+        display: flex;
+        width: 60px;
+        height: 35px;
+        margin-right: 20px;
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        background-color: cornflowerblue; }
+        .services .inner .theme button::after {
+          content: "";
+          position: absolute;
+          right: 4px;
+          top: 4px;
+          width: 28px;
+          height: 28px;
+          border-radius: 100px;
+          background: #ffab00; }
+        .services .inner .theme button.dark::after {
+          right: 28px; }
+      .services .inner .theme span {
+        font: bold 17px/1 "Barlow Condensed";
+        letter-spacing: 2px; }
+    .services .inner .content {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start; }
+      .services .inner .content article {
+        width: 28%;
+        margin-bottom: 65px; }
+        .services .inner .content article .pic {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 30px; }
+          .services .inner .content article .pic img {
+            width: 100%;
+            height: 100%; }
+        .services .inner .content article strong {
+          display: block;
+          margin-bottom: 20px;
+          font: bold 20px/30px "Barlow Condensed";
+          letter-spacing: 1.2px; }
+        .services .inner .content article p {
+          font: normal 14px/28px "Open Sans";
+          letter-spacing: 0.8px; }
+        .services .inner .content article:nth-of-type(2), .services .inner .content article:nth-of-type(5), .services .inner .content article:nth-of-type(8) {
+          padding: 0 80px; }
+        .services .inner .content article:nth-of-type(3) .pic {
+          width: 80px;
+          height: 40px; }
+  .services .page2Bottom {
+    width: 100%;
+    display: block;
+    transform: translateY(5px); }
+    .services .page2Bottom img {
+      width: 100%;
+      height: 100%; }
+
+@media screen and (max-width: 1223px) {
+  .services {
+    padding: 90px 0 0;
+    position: relative;
+    width: 100%; }
+    .services .inner {
+      width: 568px;
+      padding-bottom: 40px; }
+      .services .inner .textbox {
+        max-width: 100%; }
+      .services .inner .theme {
+        transform: translate(100px, -400px); }
+      .services .inner .content article {
+        width: 44%;
+        margin-bottom: 65px;
+        box-sizing: border-box; }
+        .services .inner .content article:nth-of-type(2), .services .inner .content article:nth-of-type(4), .services .inner .content article:nth-of-type(6), .services .inner .content article:nth-of-type(8) {
+          padding-left: 50px;
+          padding-right: 0; }
+        .services .inner .content article:nth-of-type(5) {
+          padding: 0; } }
+@media screen and (max-width: 660px) {
+  .services {
+    padding: 90px 0 0;
+    position: relative;
+    width: 100%; }
+    .services .inner {
+      width: 90%;
+      position: relative; }
+      .services .inner .theme {
+        transform: translate(0px, 0px);
+        position: absolute;
+        top: 0px;
+        right: 0px; }
+      .services .inner .content {
+        padding-left: 20px; }
+        .services .inner .content article {
+          width: 90%;
+          margin-bottom: 65px;
+          box-sizing: border-box; }
+          .services .inner .content article:nth-of-type(2), .services .inner .content article:nth-of-type(4), .services .inner .content article:nth-of-type(6), .services .inner .content article:nth-of-type(8) {
+            padding: 0px; } }
+.school {
+  width: 100%;
+  margin-top: -5px;
+  padding-top: 150px;
+  background: #191136; }
+  .school .inner {
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    position: relative; }
+    .school .inner .orangeBig {
+      z-index: 0;
+      transform: rotate(-30deg);
+      position: absolute;
+      width: 90px;
+      height: 114px;
+      top: 100px;
+      left: -10px; }
+      .school .inner .orangeBig img {
+        width: 100%;
+        height: 100%; }
+    .school .inner .orangeSmall {
+      z-index: 0;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 340px;
+      top: 205px;
+      background: #ffaa00;
+      border-radius: 50%; }
+      .school .inner .orangeSmall span {
+        width: 100%;
+        height: 100%; }
+    .school .inner .textBox {
+      width: 412px;
+      z-index: 10;
+      position: relative;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: 0.5s; }
+      .school .inner .textBox.eventOn {
+        opacity: 1;
+        transform: translateY(0px); }
+      .school .inner .textBox h4 {
+        color: #fff;
+        font: bold 14px/50px "Barlow Condensed";
+        letter-spacing: 5px; }
+      .school .inner .textBox h1 {
+        margin-top: 21px;
+        font: bold 33px/36px "Barlow Condensed";
+        letter-spacing: 6px;
+        color: #fff;
+        margin-bottom: 25px;
+        width: 110%; }
+      .school .inner .textBox p {
+        width: 95%;
+        color: #fff;
+        font: normal 16px/28px "Open Sans";
+        letter-spacing: normal; }
+    .school .inner .man {
+      width: 540px;
+      height: 600px;
+      position: absolute;
+      left: 50%;
+      top: -50px;
+      margin-left: 80px; }
+      .school .inner .man img {
+        width: 100%;
+        height: 100%; }
+    .school .inner .cloud {
+      position: absolute;
+      left: 43%;
+      top: 0;
+      width: 300px; }
+      .school .inner .cloud img {
+        width: 100%;
+        height: 100%; }
+  .school .page3Bottom {
+    width: 100%;
+    display: block;
+    height: 140px; }
+    .school .page3Bottom img {
+      width: 100%;
+      height: 100%; }
+
+@media screen and (max-width: 1223px) {
+  .school {
+    width: 100%;
+    margin-top: -5px;
+    padding-top: 100px; }
+    .school .inner {
+      width: 568px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+      position: relative; }
+      .school .inner .textBox {
+        width: 90%;
+        z-index: 10;
+        position: relative; }
+      .school .inner .man {
+        display: block;
+        box-sizing: border-box;
+        width: 70%;
+        height: 500px;
+        position: relative;
+        margin-top: 70px;
+        left: 0;
+        top: 0; }
+        .school .inner .man img {
+          width: 100%;
+          height: 100%; }
+      .school .inner .cloud {
+        position: absolute;
+        left: 43%;
+        top: 40%;
+        width: 300px; }
+        .school .inner .cloud img {
+          width: 100%;
+          height: 100%; }
+
+  .page3Bottom {
+    width: 100%;
+    display: none; } }
+@media screen and (max-width: 660px) {
+  .school {
+    width: 100%;
+    margin-top: -5px;
+    padding-top: 100px; }
+    .school .inner {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 60px;
+      position: relative; }
+      .school .inner .orangeSmall {
+        left: 60%; }
+      .school .inner .textBox {
+        width: 90%;
+        z-index: 10;
+        position: relative; }
+      .school .inner .man {
+        width: 70%;
+        height: 400px; }
+      .school .inner .cloud {
+        position: absolute;
+        left: 43%;
+        top: 50%;
+        width: 200px; } }
+.aboutUs {
+  width: 100%;
+  padding: 100px 0 130px; }
+  .aboutUs .inner {
+    width: 1024px;
+    position: relative;
+    margin: 0 auto; }
+    .aboutUs .inner .about {
+      padding-top: 150px;
+      padding-bottom: 50px;
+      position: relative;
+      height: 760px; }
+      .aboutUs .inner .about .orangeBig {
+        z-index: -1;
+        transform: rotate(-30deg);
+        position: absolute;
+        width: 90px;
+        height: 114px;
+        top: 250px;
+        left: -10px; }
+        .aboutUs .inner .about .orangeBig img {
+          width: 100%;
+          height: 100%; }
+      .aboutUs .inner .about .redDot {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 400px;
+        top: 30%; }
+        .aboutUs .inner .about .redDot img {
+          width: 100%;
+          height: 100%; }
+      .aboutUs .inner .about .textBox {
+        width: 40%;
+        padding-right: 100px;
+        float: left;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: 0.5s; }
+        .aboutUs .inner .about .textBox h4 {
+          font: bold 14px/50px "Barlow Condensed";
+          letter-spacing: 5px; }
+        .aboutUs .inner .about .textBox h1 {
+          margin-top: 21px;
+          margin-bottom: 25px;
+          font: bold 36px/36px "Barlow Condensed";
+          letter-spacing: 6px; }
+        .aboutUs .inner .about .textBox p {
+          font: normal 16px/28px "Open Sans";
+          letter-spacing: normal; }
+        .aboutUs .inner .about .textBox.eventOn {
+          opacity: 1;
+          transform: translateY(0px); }
+      .aboutUs .inner .about .aboutPic {
+        float: right;
+        width: 50%;
+        transform: translateY(-70px); }
+        .aboutUs .inner .about .aboutPic img {
+          width: 100%;
+          height: 100%; }
+    .aboutUs .inner .countMotion {
+      width: 100%;
+      padding-bottom: 220px; }
+      .aboutUs .inner .countMotion .inner h2 {
+        width: 80%;
+        font: normal 29px/35px "Barlow Condensed";
+        letter-spacing: 3px;
+        text-align: center;
+        margin: 0 auto 70px; }
+      .aboutUs .inner .countMotion .inner .redDot {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border-radius: 50%;
+        transform: translate(-100px, -100px);
+        z-index: -1;
+        position: relative;
+        margin-left: auto; }
+      .aboutUs .inner .countMotion .inner ul {
+        display: flex;
+        justify-content: space-between; }
+        .aboutUs .inner .countMotion .inner ul li {
+          position: relative; }
+          .aboutUs .inner .countMotion .inner ul li .circleBig {
+            width: 170px;
+            height: 170px;
+            margin: auto;
+            background: conic-gradient(#3bc4f4 67%, #ddd 33%);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            position: relative; }
+            .aboutUs .inner .countMotion .inner ul li .circleBig .circleSm {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 150px;
+              height: 150px;
+              border-radius: 50%;
+              transform: translate(-50%, -50%);
+              background: #fff; }
+          .aboutUs .inner .countMotion .inner ul li:nth-of-type(2) .circleBig {
+            background: conic-gradient(#3bc4f4 80%, #ddd 20%); }
+          .aboutUs .inner .countMotion .inner ul li:nth-of-type(3) .circleBig {
+            background: conic-gradient(#3bc4f4 75%, #ddd 25%); }
+          .aboutUs .inner .countMotion .inner ul li:nth-of-type(4) .circleBig {
+            background: conic-gradient(#3bc4f4 55%, #ddd 45%); }
+          .aboutUs .inner .countMotion .inner ul li .counter1,
+          .aboutUs .inner .countMotion .inner ul li .counter2,
+          .aboutUs .inner .countMotion .inner ul li .counter3,
+          .aboutUs .inner .countMotion .inner ul li .counter4 {
+            position: absolute;
+            top: 38%;
+            left: 53%;
+            transform: translate(-50%, -50%);
+            font: bold 30px "Barlow Condensed";
+            letter-spacing: 3px; }
+          .aboutUs .inner .countMotion .inner ul li .data {
+            width: 100%;
+            display: block;
+            font: normal 20px "Barlow Condensed";
+            letter-spacing: 3px;
+            text-align: center; }
+    .aboutUs .inner .team {
+      width: 100%;
+      position: relative; }
+      .aboutUs .inner .team .orangeBg {
+        width: 540px;
+        height: 650px;
+        position: absolute;
+        top: -252px;
+        left: -255px;
+        z-index: -1; }
+        .aboutUs .inner .team .orangeBg img {
+          width: 100%;
+          height: 100%; }
+      .aboutUs .inner .team .video {
+        width: 100%;
+        height: 520px;
+        transform: translate3d(30%, 50%, 0);
+        transition: 0.5s;
+        margin: 140px 0;
+        background: #fff;
+        z-index: 0;
+        opacity: 0; }
+        .aboutUs .inner .team .video iframe {
+          border: none; }
+      .aboutUs .inner .team .orangeSmall {
+        position: absolute;
+        top: 45px;
+        left: 65px;
+        width: 30px;
+        height: 30px; }
+        .aboutUs .inner .team .orangeSmall img {
+          width: 100%;
+          height: 100%; }
+      .aboutUs .inner .team .orange1 {
+        position: absolute;
+        left: -230px;
+        top: -240px;
+        width: 530px;
+        height: 514px; }
+        .aboutUs .inner .team .orange1 img {
+          width: 100%;
+          height: 100%; }
+      .aboutUs .inner .team .orange2 {
+        position: absolute;
+        width: 70px;
+        height: 80px;
+        transform: rotate(80deg);
+        right: -40px;
+        top: 440px;
+        z-index: -1; }
+        .aboutUs .inner .team .orange2 img {
+          width: 100%;
+          height: 100%; }
+      .aboutUs .inner .team .textBox {
+        padding-bottom: 50px;
+        width: 100%; }
+        .aboutUs .inner .team .textBox h4 {
+          font: bold 13px/60px "Barlow Condensed";
+          letter-spacing: 5px;
+          margin-bottom: 11px; }
+        .aboutUs .inner .team .textBox h1 {
+          font: bold 35px/55px "Barlow Condensed";
+          letter-spacing: 3px; }
+        .aboutUs .inner .team .textBox p {
+          width: 50%;
+          position: absolute;
+          right: 0;
+          margin-top: -30px;
+          font: normal 14px/30px "Open Sans";
+          letter-spacing: 1px; }
+      .aboutUs .inner .team figure {
+        width: 100vw;
+        transform: translateX(-40px); }
+        .aboutUs .inner .team figure .swiper {
+          display: flex;
+          margin-top: 150px;
+          width: 100%;
+          position: relative;
+          height: 100%; }
+          .aboutUs .inner .team figure .swiper .swiper-button-prev {
+            opacity: 0; }
+          .aboutUs .inner .team figure .swiper .swiper-button-next {
+            opacity: 0; }
+          .aboutUs .inner .team figure .swiper .swiper-pagination {
+            left: -15%; }
+          .aboutUs .inner .team figure .swiper .swiper-slide {
+            width: 380px;
+            height: 100%;
+            position: relative; }
+            .aboutUs .inner .team figure .swiper .swiper-slide .teamItem {
+              width: 100%;
+              background: #f5f8fb;
+              position: relative;
+              transition: 0.5s; }
+              .aboutUs .inner .team figure .swiper .swiper-slide .teamItem::before {
+                content: "";
+                display: block;
+                padding-top: 100%; }
+              .aboutUs .inner .team figure .swiper .swiper-slide .teamItem .titleSmall {
+                position: absolute;
+                top: 20px;
+                left: 20px; }
+                .aboutUs .inner .team figure .swiper .swiper-slide .teamItem .titleSmall span {
+                  display: block;
+                  opacity: 0;
+                  transform: translateY(-50%);
+                  font: bold 15px/20px "Barlow Condensed";
+                  letter-spacing: 1.2px; }
+              .aboutUs .inner .team figure .swiper .swiper-slide .teamItem img {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 85%;
+                max-height: 95%; }
+              .aboutUs .inner .team figure .swiper .swiper-slide .teamItem:hover {
+                background: #fff; }
+                .aboutUs .inner .team figure .swiper .swiper-slide .teamItem:hover .titleSmall span {
+                  opacity: 1;
+                  transform: translateY(0);
+                  transition: 0.5s; }
+                  .aboutUs .inner .team figure .swiper .swiper-slide .teamItem:hover .titleSmall span:last-child {
+                    transition-delay: 0.2s; }
+
+@media screen and (max-width: 1223px) {
+  .aboutUs {
+    width: 100%;
+    padding: 100px 0 130px; }
+    .aboutUs .inner {
+      width: 568px;
+      position: relative;
+      margin: 0 auto; }
+      .aboutUs .inner .about {
+        padding-top: 0px;
+        padding-bottom: 80px;
+        position: relative;
+        height: auto; }
+        .aboutUs .inner .about .orangeBig {
+          left: 10%;
+          z-index: -1; }
+        .aboutUs .inner .about .redDot {
+          z-index: -1; }
+        .aboutUs .inner .about .textBox {
+          width: 80%;
+          padding-right: 0px;
+          float: none;
+          margin: 0 auto; }
+        .aboutUs .inner .about .aboutPic {
+          float: none;
+          width: 75%;
+          transform: translateY(0px);
+          margin: 0 auto;
+          padding-top: 50px; }
+      .aboutUs .inner .team {
+        width: 100%;
+        position: relative; }
+        .aboutUs .inner .team .orangeBg {
+          left: -9999px; }
+        .aboutUs .inner .team .video {
+          width: 100%;
+          height: 520px;
+          transform: translateY(-30px);
+          margin: 140px 0;
+          background: #fff; }
+        .aboutUs .inner .team .orangeSmall {
+          left: -99999px; }
+        .aboutUs .inner .team .orange1 {
+          left: -99999px; }
+        .aboutUs .inner .team .orange2 {
+          left: -99999px; }
+        .aboutUs .inner .team .textBox {
+          padding-bottom: 50px;
+          width: 100%; }
+          .aboutUs .inner .team .textBox p {
+            width: 100%;
+            margin: 20px 0; }
+      .aboutUs .inner .countMotion .inner ul {
+        flex-wrap: wrap; }
+        .aboutUs .inner .countMotion .inner ul li {
+          width: 50%; }
+          .aboutUs .inner .countMotion .inner ul li:nth-of-type(3), .aboutUs .inner .countMotion .inner ul li:nth-of-type(4) {
+            margin-top: 50px; } }
+@media screen and (max-width: 660px) {
+  .aboutUs .inner {
+    width: 100%; }
+    .aboutUs .inner .about .redDot {
+      left: 300px; }
+    .aboutUs .inner .team {
+      width: 100%;
+      position: relative; }
+      .aboutUs .inner .team .video {
+        width: 90%;
+        height: 420px;
+        transform: translateY(-30px);
+        margin: 140px auto;
+        background: #fff; }
+      .aboutUs .inner .team .textBox {
+        padding-bottom: 50px;
+        width: 90%;
+        margin: 0 auto; }
+        .aboutUs .inner .team .textBox p {
+          width: 90%;
+          margin: 20px auto;
+          right: auto; }
+      .aboutUs .inner .team .swiper {
+        width: 250%;
+        margin-top: 200px;
+        transform: translateX(0px); }
+        .aboutUs .inner .team .swiper li {
+          width: 250px;
+          height: 260px; }
+          .aboutUs .inner .team .swiper li img {
+            width: 100%;
+            height: 100%; }
+    .aboutUs .inner .countMotion .inner ul li {
+      width: 90%;
+      margin: 0 auto; }
+      .aboutUs .inner .countMotion .inner ul li:nth-of-type(2) {
+        margin-top: 50px; } }
+.partners {
+  width: 100%; }
+  .partners .inner {
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+    position: relative; }
+    .partners .inner .orangePic {
+      width: 140px;
+      height: 120px;
+      z-index: -1;
+      position: absolute;
+      left: 30%;
+      top: 80px; }
+      .partners .inner .orangePic img {
+        width: 100%;
+        height: 100%; }
+    .partners .inner .textBox {
+      width: 100%;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: 1s; }
+      .partners .inner .textBox h4 {
+        font: bold 13px/60px "Barlow Condensed";
+        letter-spacing: 5px;
+        margin-bottom: 11px;
+        width: 50%; }
+      .partners .inner .textBox h1 {
+        font: bold 35px/55px "Barlow Condensed";
+        letter-spacing: 3px;
+        width: 50%; }
+      .partners .inner .textBox p {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        margin-top: -100px;
+        font: normal 14px/30px "Open Sans";
+        letter-spacing: 1px;
+        width: 50%; }
+      .partners .inner .textBox.eventOn {
+        opacity: 1;
+        transform: translateY(0px); }
+  .partners .purpleBox {
+    width: 100%;
+    padding-bottom: 100px;
+    background: #191136;
+    position: relative; }
+    .partners .purpleBox::before {
+      z-index: 1;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 180px;
+      background: #fff; }
+    .partners .purpleBox .innerBox {
+      position: relative;
+      width: 1124px;
+      padding: 150px;
+      z-index: 2;
+      margin: 0 auto;
+      background: #1e1541;
+      box-sizing: border-box;
+      padding-bottom: 100px; }
+      .partners .purpleBox .innerBox .slider {
+        width: 1720px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        .partners .purpleBox .innerBox .slider .page1, .partners .purpleBox .innerBox .slider .page2 {
+          width: 860px;
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 30px;
+          position: relative;
+          top: 0;
+          left: 0;
+          transition: opacity 0.6s ease-in 0s; }
+          .partners .purpleBox .innerBox .slider .page1 article, .partners .purpleBox .innerBox .slider .page2 article {
+            width: 25%;
+            height: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border: 1px solid #382879;
+            box-sizing: border-box; }
+            .partners .purpleBox .innerBox .slider .page1 article .leftTop, .partners .purpleBox .innerBox .slider .page2 article .leftTop {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: calc(100% + 2px);
+              height: calc(100% + 2px);
+              z-index: 3;
+              overflow: hidden; }
+              .partners .purpleBox .innerBox .slider .page1 article .leftTop::before, .partners .purpleBox .innerBox .slider .page1 article .leftTop::after, .partners .purpleBox .innerBox .slider .page2 article .leftTop::before, .partners .purpleBox .innerBox .slider .page2 article .leftTop::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #fff;
+                transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1); }
+              .partners .purpleBox .innerBox .slider .page1 article .leftTop::before, .partners .purpleBox .innerBox .slider .page2 article .leftTop::before {
+                width: 100%;
+                height: 2px;
+                transform: translateX(-110%); }
+              .partners .purpleBox .innerBox .slider .page1 article .leftTop::after, .partners .purpleBox .innerBox .slider .page2 article .leftTop::after {
+                width: 2px;
+                height: 100%;
+                transform: translateY(-110%); }
+            .partners .purpleBox .innerBox .slider .page1 article .rightBottom, .partners .purpleBox .innerBox .slider .page2 article .rightBottom {
+              position: absolute;
+              bottom: -2px;
+              right: -2px;
+              width: calc(100% + 2px);
+              height: calc(100% + 2px);
+              z-index: 3;
+              overflow: hidden; }
+              .partners .purpleBox .innerBox .slider .page1 article .rightBottom::before, .partners .purpleBox .innerBox .slider .page1 article .rightBottom::after, .partners .purpleBox .innerBox .slider .page2 article .rightBottom::before, .partners .purpleBox .innerBox .slider .page2 article .rightBottom::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background: #fff;
+                transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1); }
+              .partners .purpleBox .innerBox .slider .page1 article .rightBottom::before, .partners .purpleBox .innerBox .slider .page2 article .rightBottom::before {
+                width: 100%;
+                height: 2px;
+                transform: translateX(110%); }
+              .partners .purpleBox .innerBox .slider .page1 article .rightBottom::after, .partners .purpleBox .innerBox .slider .page2 article .rightBottom::after {
+                width: 2px;
+                height: 100%;
+                transform: translateY(110%); }
+            .partners .purpleBox .innerBox .slider .page1 article:hover .leftTop::before, .partners .purpleBox .innerBox .slider .page1 article:hover .leftTop::after, .partners .purpleBox .innerBox .slider .page2 article:hover .leftTop::before, .partners .purpleBox .innerBox .slider .page2 article:hover .leftTop::after {
+              transform: none; }
+            .partners .purpleBox .innerBox .slider .page1 article:hover .rightBottom::before, .partners .purpleBox .innerBox .slider .page1 article:hover .rightBottom::after, .partners .purpleBox .innerBox .slider .page2 article:hover .rightBottom::before, .partners .purpleBox .innerBox .slider .page2 article:hover .rightBottom::after {
+              transform: none; }
+            .partners .purpleBox .innerBox .slider .page1 article img, .partners .purpleBox .innerBox .slider .page2 article img {
+              max-width: 55%;
+              max-height: 45%; }
+        .partners .purpleBox .innerBox .slider .page2 {
+          left: -860px;
+          top: 0;
+          padding: 0;
+          opacity: 0; }
+      .partners .purpleBox .innerBox .dots {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 80px; }
+        .partners .purpleBox .innerBox .dots li {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          box-sizing: border-box;
+          margin-left: 12px;
+          background: #fff;
+          cursor: pointer; }
+          .partners .purpleBox .innerBox .dots li:nth-of-type(2) {
+            opacity: 0.2; }
+
+@media screen and (max-width: 1223px) {
+  .partners {
+    width: 100%; }
+    .partners .inner {
+      width: 568px; }
+      .partners .inner .orangePic {
+        width: 100px;
+        height: 80px;
+        left: 0; }
+      .partners .inner .textBox {
+        width: 100%; }
+        .partners .inner .textBox p {
+          width: 100%;
+          margin-top: 0px; }
+    .partners .purpleBox::before {
+      display: none; }
+    .partners .purpleBox .innerBox {
+      position: relative;
+      width: 100%;
+      padding: 100px;
+      z-index: 2;
+      margin: 0 auto; }
+      .partners .purpleBox .innerBox .slider {
+        width: 180%; }
+        .partners .purpleBox .innerBox .slider .page1 {
+          width: 90%;
+          margin-left: 0px; }
+        .partners .purpleBox .innerBox .slider .page2 {
+          width: 90%;
+          left: -50%;
+          margin-left: 0; } }
+@media screen and (max-width: 660px) {
+  .partners {
+    width: 100%; }
+    .partners .inner {
+      width: 90%; }
+    .partners .purpleBox .innerBox {
+      position: relative;
+      width: 100%;
+      padding: 100px 30px;
+      z-index: 2;
+      margin: 0 auto; }
+      .partners .purpleBox .innerBox .slider {
+        width: 170%; }
+        .partners .purpleBox .innerBox .slider .page1 {
+          width: 85%; }
+          .partners .purpleBox .innerBox .slider .page1 article {
+            width: 50%; }
+        .partners .purpleBox .innerBox .slider .page2 {
+          width: 85%; }
+          .partners .purpleBox .innerBox .slider .page2 article {
+            width: 50%; } }
+.career {
+  padding-bottom: 200px;
+  width: 100%;
+  position: relative;
+  background: #191136; }
+  .career .inner {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative; }
+    .career .inner .careerBox {
+      box-sizing: border-box;
+      height: 520px; }
+      .career .inner .careerBox .orangePic {
+        width: 140px;
+        height: 125px;
+        position: absolute;
+        left: -50px;
+        top: 40px;
+        z-index: 0; }
+        .career .inner .careerBox .orangePic img {
+          width: 100%;
+          height: 100%; }
+      .career .inner .careerBox .orangeCircle {
+        position: absolute;
+        top: 140px;
+        right: 60px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #ffaa00; }
+      .career .inner .careerBox .textBox {
+        width: 43%;
+        color: #fff;
+        padding: 40px 0 100px;
+        position: relative;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: 1s; }
+        .career .inner .careerBox .textBox.eventOn {
+          opacity: 1;
+          transform: translateY(0px); }
+        .career .inner .careerBox .textBox h4 {
+          z-index: 1;
+          font: bold 13px/60px "Barlow Condensed";
+          letter-spacing: 5px;
+          padding-bottom: 11px; }
+        .career .inner .careerBox .textBox h1 {
+          z-index: 1;
+          font: bold 35px/55px "Barlow Condensed";
+          letter-spacing: 3px; }
+      .career .inner .careerBox .pBox p {
+        color: #fff;
+        width: 48%;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        font: normal 13px/30px "Open Sans";
+        letter-spacing: 1px; }
+      .career .inner .careerBox .pBox .p2 {
+        top: 400px; }
+    .career .inner .jobBox {
+      margin-top: 110px;
+      box-sizing: border-box;
+      width: 100%;
+      color: #fff; }
+      .career .inner .jobBox h1 {
+        font: bold 20px/60px "Barlow Condensed";
+        letter-spacing: 6.5px; }
+      .career .inner .jobBox .wrap {
+        padding-top: 27px;
+        width: 100%; }
+        .career .inner .jobBox .wrap article {
+          width: 100%;
+          padding: 18px 30px 18px 0; }
+          .career .inner .jobBox .wrap article .jobHead {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center; }
+            .career .inner .jobBox .wrap article .jobHead .pic {
+              width: 100px;
+              padding-right: 50px; }
+              .career .inner .jobBox .wrap article .jobHead .pic img {
+                max-width: 60px; }
+            .career .inner .jobBox .wrap article .jobHead p {
+              width: 350px;
+              padding-right: 100px;
+              font: bold 14px/60px "Barlow Condensed";
+              letter-spacing: 5px; }
+            .career .inner .jobBox .wrap article .jobHead > span {
+              width: 510px;
+              padding-right: 110px;
+              font: normal 12px/20px "Barlow Condensed";
+              letter-spacing: 5px; }
+            .career .inner .jobBox .wrap article .jobHead .icon {
+              width: 160px;
+              width: 60px;
+              height: 50px;
+              background: rgba(187, 187, 187, 0.315);
+              border-radius: 50%;
+              box-sizing: border-box;
+              text-align: center;
+              cursor: pointer;
+              position: relative;
+              transition: 0.5s; }
+              .career .inner .jobBox .wrap article .jobHead .icon span {
+                font: bold 24px/50px "arial";
+                color: #fff;
+                z-index: 4;
+                display: block; }
+              .career .inner .jobBox .wrap article .jobHead .icon:hover {
+                background: #fff; }
+                .career .inner .jobBox .wrap article .jobHead .icon:hover span {
+                  color: #191136; }
+          .career .inner .jobBox .wrap article .answerBox {
+            width: 100%;
+            display: block;
+            padding: 16px 110px 18px 0;
+            box-sizing: border-box;
+            display: none;
+            transition: display 0.6s; }
+            .career .inner .jobBox .wrap article .answerBox p {
+              opacity: 0.8;
+              font: normal 14px/30px "Open Sans";
+              letter-spacing: 1px; }
+
+@keyframes scale1 {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+@media screen and (max-width: 1223px) {
+  .career {
+    padding-bottom: 200px;
+    width: 100%;
+    position: relative;
+    background: #191136; }
+    .career .inner {
+      width: 568px; }
+      .career .inner .careerBox {
+        box-sizing: border-box;
+        height: auto; }
+        .career .inner .careerBox .orangePic {
+          width: 100px;
+          height: 85px; }
+        .career .inner .careerBox .orangeCircle {
+          width: 50px;
+          height: 50px; }
+        .career .inner .careerBox .textBox {
+          width: 100%;
+          padding: 40px 0 50px; }
+        .career .inner .careerBox .pBox {
+          width: 100%; }
+          .career .inner .careerBox .pBox p {
+            width: 100%;
+            position: inherit; }
+          .career .inner .careerBox .pBox .p2 {
+            margin-top: 30px; }
+      .career .inner .jobBox .wrap {
+        padding-top: 27px;
+        width: 100%; }
+        .career .inner .jobBox .wrap article {
+          padding: 18px 0px 18px 0; }
+          .career .inner .jobBox .wrap article .jobHead .pic {
+            width: 70px;
+            padding-right: 50px; }
+          .career .inner .jobBox .wrap article .jobHead p {
+            width: 350px;
+            padding-right: 40px;
+            font: bold 14px/20px "Barlow Condensed";
+            letter-spacing: 5px; }
+          .career .inner .jobBox .wrap article .jobHead > span {
+            width: 270px;
+            padding-right: 10px;
+            font: normal 12px/20px "Barlow Condensed";
+            letter-spacing: 5px; }
+          .career .inner .jobBox .wrap article .jobHead .icon {
+            width: 160px;
+            width: 60px;
+            height: 40px; }
+            .career .inner .jobBox .wrap article .jobHead .icon span {
+              font: bold 24px/40px "arial"; }
+          .career .inner .jobBox .wrap article .answerBox {
+            width: 90%;
+            padding-right: 0px; } }
+@media screen and (max-width: 660px) {
+  .career {
+    padding-bottom: 200px;
+    width: 100%;
+    position: relative;
+    background: #191136; }
+    .career .inner {
+      width: 90%; }
+      .career .inner .careerBox .orangePic {
+        left: 0; }
+      .career .inner .jobBox .wrap {
+        padding-top: 27px;
+        width: 100%; }
+        .career .inner .jobBox .wrap article {
+          padding: 18px 0px 18px 0; }
+          .career .inner .jobBox .wrap article .jobHead {
+            width: 85%; }
+            .career .inner .jobBox .wrap article .jobHead .pic {
+              display: none; }
+            .career .inner .jobBox .wrap article .jobHead > span {
+              display: none; }
+            .career .inner .jobBox .wrap article .jobHead .icon {
+              width: 160px;
+              width: 50px;
+              height: 40px; }
+              .career .inner .jobBox .wrap article .jobHead .icon span {
+                font: bold 20px/40px "arial"; }
+          .career .inner .jobBox .wrap article .answerBox {
+            width: 80%; } }
+.contactUs {
+  width: 100%;
+  background: #fa0;
+  position: relative; }
+  .contactUs .page7Top {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0; }
+    .contactUs .page7Top img {
+      width: 100%;
+      height: 100%; }
+  .contactUs .inner {
+    width: 1024px;
+    position: relative;
+    margin: 0 auto;
+    padding: 250px 0 150px; }
+    .contactUs .inner .contactsTxt {
+      width: 50%;
+      transform: translate(-60px, 70px);
+      opacity: 0;
+      transition: 0.5s; }
+      .contactUs .inner .contactsTxt.eventOn {
+        opacity: 1;
+        transform: translate(-60px, -30px); }
+      .contactUs .inner .contactsTxt h4 {
+        font: bold 14px/50px "Barlow Condensed";
+        letter-spacing: 5px;
+        margin-bottom: 21px; }
+      .contactUs .inner .contactsTxt h1 {
+        font: bold 35px/55px "Barlow Condensed";
+        letter-spacing: 3px;
+        margin-bottom: 25px; }
+      .contactUs .inner .contactsTxt p {
+        width: 90%;
+        margin-bottom: 30px;
+        font: normal 13px/30px "Open Sans";
+        letter-spacing: 1px; }
+      .contactUs .inner .contactsTxt .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .contactUs .inner .contactsTxt .list span {
+          font: bold 13px/30px "Barlow Condensed";
+          letter-spacing: 4px;
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+          width: 160px;
+          margin-bottom: 10px; }
+          .contactUs .inner .contactsTxt .list span:nth-of-type(2) {
+            width: 125px; }
+          .contactUs .inner .contactsTxt .list span::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            margin-top: 1px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #000;
+            transform: translateX(-110%); }
+          .contactUs .inner .contactsTxt .list span:hover::after {
+            transform: translateX(110%);
+            transition: transform 0.7s ease-in-out; }
+        .contactUs .inner .contactsTxt .list ul {
+          display: flex;
+          flex-direction: row;
+          font: bold 13px/30px "Barlow Condensed";
+          letter-spacing: 4px; }
+          .contactUs .inner .contactsTxt .list ul li {
+            color: #000;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer; }
+            .contactUs .inner .contactsTxt .list ul li:nth-of-type(3)::after {
+              display: none; }
+            .contactUs .inner .contactsTxt .list ul li::after {
+              content: "/";
+              display: inline-flex;
+              padding: 0 10px; }
+            .contactUs .inner .contactsTxt .list ul li::before {
+              content: "";
+              width: 100%;
+              border-bottom: 2px solid;
+              display: block;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transform: translateX(-110%);
+              background: #000;
+              margin-top: 2px; }
+            .contactUs .inner .contactsTxt .list ul li:hover::before {
+              transform: translateX(110%);
+              transition: transform 0.7s ease-in-out; }
+    .contactUs .inner form {
+      width: 40%;
+      background: #1e1541;
+      color: #fff;
+      padding: 120px 90px 80px;
+      position: absolute;
+      right: -100px;
+      top: 0;
+      z-index: 10; }
+      .contactUs .inner form fieldset {
+        border: none;
+        width: 100%; }
+        .contactUs .inner form fieldset legend {
+          font: bold 40px/55px "Barlow Condensed";
+          letter-spacing: 3px;
+          margin-bottom: 40px; }
+        .contactUs .inner form fieldset table {
+          width: 100%; }
+          .contactUs .inner form fieldset table input[type=text], .contactUs .inner form fieldset table input[type=email], .contactUs .inner form fieldset table textarea {
+            height: 70px;
+            font: normal 14px "Barlow Condensed";
+            letter-spacing: 4px;
+            width: 100%;
+            outline: none;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            background: #1e1541;
+            color: #fff;
+            border: none;
+            border-bottom: 1px solid rgba(187, 187, 187, 0.315);
+            padding: 20px; }
+          .contactUs .inner form fieldset table textarea {
+            height: 100px;
+            margin-top: 20px; }
+          .contactUs .inner form fieldset table input[type=submit] {
+            cursor: pointer;
+            border: none;
+            margin-top: 60px;
+            width: 100%;
+            height: 50px;
+            background: #fa0;
+            border-radius: 30px;
+            font: bold 14px/50px "Barlow Condensed";
+            transition: 0.5s;
+            letter-spacing: 3px;
+            color: #191136;
+            text-align: center;
+            display: block; }
+            .contactUs .inner form fieldset table input[type=submit]:hover {
+              background: #fff; }
+          .contactUs .inner form fieldset table .pop {
+            margin-top: 7px; }
+            .contactUs .inner form fieldset table .pop h1 {
+              width: 110%;
+              font: bold 25px/1.8 "Barlow Condensed";
+              letter-spacing: 0.7px; }
+            .contactUs .inner form fieldset table .pop .close {
+              outline: none;
+              border: none;
+              padding: 10px;
+              background: #1e1541;
+              color: #fff;
+              text-align: right;
+              width: 100%;
+              cursor: pointer;
+              transition: 0.3s; }
+              .contactUs .inner form fieldset table .pop .close:hover {
+                transform: scale(1.1); }
+          .contactUs .inner form fieldset table .err {
+            display: block;
+            transform: translateY(-8px);
+            font: normal 12px/1 "Barlow Condensed";
+            text-align: left;
+            color: #fa0; }
+    .contactUs .inner #map {
+      width: 300px;
+      height: 300px;
+      filter: drop-shadow(5px 5px 5px #1e1541);
+      margin-top: 50px;
+      margin-left: -62px; }
+
+@media screen and (max-width: 1223px) {
+  .contactUs {
+    width: 100%;
+    background: #fa0;
+    position: relative; }
+    .contactUs .page7Top {
+      width: 100%;
+      z-index: 1;
+      position: absolute;
+      top: 0; }
+      .contactUs .page7Top img {
+        width: 100%;
+        height: 100%; }
+    .contactUs .inner {
+      width: 568px; }
+      .contactUs .inner .contactsTxt {
+        width: 100%; }
+        .contactUs .inner .contactsTxt.eventOn {
+          transform: translate(0px, -30px); }
+      .contactUs .inner form {
+        width: 70%;
+        margin-top: 50px;
+        position: relative;
+        right: auto;
+        top: auto;
+        z-index: 10; }
+      .contactUs .inner #map {
+        margin-left: 0px; } }
+@media screen and (max-width: 660px) {
+  .contactUs .inner {
+    width: 90%; }
+    .contactUs .inner .contactsTxt {
+      width: 100%;
+      transform: translateX(0px); }
+    .contactUs .inner form {
+      width: 50%; } }
+.topbar {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 200px;
+  height: 75px;
+  cursor: pointer;
+  z-index: 990;
+  color: #fff;
+  box-sizing: border-box; }
+  .topbar .wrap {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 200px; }
+    .topbar .wrap img {
+      width: 35%;
+      height: 100%; }
+    .topbar .wrap .logotxt {
+      width: 65%;
+      padding-left: 10px; }
+      .topbar .wrap .logotxt h2 {
+        font-size: 13px;
+        line-height: 13px; }
+      .topbar .wrap .logotxt p {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 12px; }
+      .topbar .wrap .logotxt span {
+        font-size: 5px;
+        display: block;
+        line-height: 10px;
+        font-weight: 300;
+        margin-top: -1px; }
+
+.fixMenu {
+  width: 100px;
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0 70px;
+  z-index: 99; }
+  .fixMenu li {
+    color: #999;
+    width: 100%;
+    letter-spacing: 2.1px;
+    cursor: pointer;
+    text-align: center;
+    font: 16px "Barlow Condensed"; }
+    .fixMenu li.on {
+      color: #fff; }
+    .fixMenu li.darkOn {
+      color: #000; }
+
+.pageLine {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 100px;
+  width: 2px;
+  height: 100vh;
+  background: #fff;
+  z-index: 99; }
+
+.showMenu {
+  position: fixed;
+  right: 42px;
+  top: 56px;
+  height: 20px;
+  width: 20px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  display: none; }
+  .showMenu span {
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: #000; }
+    .showMenu span::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000; }
+    .showMenu span::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #000; }
+
+.hideMenu {
+  position: fixed;
+  right: 42px;
+  top: 56px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  display: none; }
+  .hideMenu span {
+    width: 100%; }
+    .hideMenu span::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 1px);
+      transform: rotate(45deg);
+      transition: 0.5s;
+      background: #fff; }
+    .hideMenu span::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: calc(50% - 1px);
+      transform: rotate(-45deg);
+      transition: 0.5s;
+      background: #fff; }
+
+.headerMenuMo {
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #191136;
+  position: fixed;
+  right: -100%;
+  top: 0; }
+  .headerMenuMo li {
+    color: #fff;
+    font: bold 15px/1.4 "Barlow Condensed";
+    letter-spacing: 2.1px;
+    padding-bottom: 4px;
+    cursor: pointer; }
+    .headerMenuMo li:nth-of-type(1) {
+      margin-left: 0; }
+
+@media screen and (max-width: 1223px) {
+  .showMenu {
+    right: 30px;
+    display: block; }
+
+  .hideMenu {
+    right: 30px;
+    display: block; }
+
+  .fixMenu {
+    width: 80px; } }
+@media screen and (max-width: 660px) {
+  .topbar {
+    left: 22px;
+    top: 48px; }
+
+  .fixMenu {
+    width: 80px;
+    right: -9999px;
+    opacity: 0; }
+
+  .hambergerMenu {
+    right: 30px; }
+
+  .pageLine {
+    display: none; } }
+footer {
+  padding: 0 0 50px;
+  width: 100%;
+  background: #fa0;
+  position: relative; }
+  footer .inner {
+    width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    footer .inner p, footer .inner span {
+      font: bold 12px/30px "Barlow Condensed";
+      letter-spacing: 4px; }
+    footer .inner span {
+      overflow: hidden;
+      cursor: pointer;
+      position: relative; }
+      footer .inner span::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 2px;
+        background: #000;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-110%); }
+      footer .inner span:hover::after {
+        transform: translateX(110%);
+        transition: transform 0.7s ease-in-out; }
+
+@media screen and (max-width: 1223px) {
+  footer .inner {
+    width: 568px; } }
+@media screen and (max-width: 660px) {
+  footer .inner {
+    width: 80%;
+    flex-direction: column; } }
+
+/*# sourceMappingURL=style.css.map */

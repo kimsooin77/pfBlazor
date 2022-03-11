@@ -1,0 +1,111 @@
+.school {
+    width: 100%; margin-top: -5px;
+    padding-top: 150px; background: #191136; 
+
+    .inner {
+        width: 1024px; margin: 0 auto; padding-bottom: 60px; position: relative;
+
+        .orangeBig {
+            z-index: 0;
+            transform: rotate(-30deg); 
+            position: absolute; width: 90px; height: 114px; top: 100px; left: -10px;
+            img {width: 100%; height: 100%;}
+        }
+        .orangeSmall {
+            z-index: 0;
+            position: absolute; width: 20px; height: 20px; left: 340px; top: 205px;
+            background: rgb(255, 170, 0); border-radius: 50%;
+            span {width: 100%; height: 100%;}
+        }
+        .textBox {
+            width: 412px; z-index: 10; position: relative; opacity: 0; transform: translateY(100px); transition: 0.5s;
+
+            &.eventOn {opacity: 1; transform: translateY(0px);}
+
+            h4 {
+                color: #fff; font: bold 14px/50px "Barlow Condensed";letter-spacing: 5px;
+            }
+            h1 {
+                margin-top: 21px; font: bold 33px/36px "Barlow Condensed"; letter-spacing: 6px;
+                color: #fff; margin-bottom: 25px; width: 110%;
+            }
+            p {
+                width: 95%;
+                color: #fff; font: normal 16px/28px "Open Sans"; letter-spacing: normal; 
+            }
+        }
+        .man {
+            width: 540px; height: 600px; position: absolute; left: 50%; 
+            top: -50px; margin-left: 80px; 
+
+            img {width: 100%; height: 100%;}
+        }
+        .cloud {
+            position: absolute; left: 43%; top: 0; width: 300px;
+
+            img {width: 100%; height: 100%;}
+        }
+    }
+    .page3Bottom {
+        width: 100%; display: block; height: 140px;
+    
+        img {width: 100%; height: 100%;}
+    }
+}
+
+
+
+@media screen and(max-width : 1223px) {
+    .school {
+        width: 100%; margin-top: -5px;
+        padding-top: 100px; 
+    
+        .inner {
+            width: 568px; margin: 0 auto; padding-bottom: 60px; position: relative;
+            
+            .textBox {
+                width: 90%; z-index: 10; position: relative;
+            }
+            .man {
+                display: block; box-sizing: border-box;
+                width: 70%; height: 500px; position: relative;  margin-top: 70px; 
+                left: 0; top: 0;
+                img {width: 100%; height: 100%;}
+            }
+            .cloud {
+                position: absolute; left: 43%; top: 40%; width: 300px;
+    
+                img {width: 100%; height: 100%;}
+            }
+        }
+        
+    }
+    .page3Bottom {
+        width: 100%; display: none; 
+    }
+}
+
+@media screen and (max-width : 660px) {
+    .school {
+        width: 100%; margin-top: -5px;
+        padding-top: 100px; 
+    
+        .inner {
+            width: 90%; margin: 0 auto; padding-bottom: 60px; position: relative;
+            
+            .orangeSmall {
+                left: 60%;
+            }
+            .textBox {
+                width: 90%; z-index: 10; position: relative;
+            }
+            .man {
+                width: 70%; height: 400px; 
+            }
+            .cloud {
+                position: absolute; left: 43%; top: 50%; width: 200px;
+            }
+        }
+        
+    }
+}

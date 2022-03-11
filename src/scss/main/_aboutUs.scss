@@ -1,0 +1,288 @@
+.aboutUs {
+    width: 100%; padding: 100px 0 130px;
+
+    .inner {
+        width: 1024px; position: relative; margin: 0 auto; 
+    
+        .about {
+            padding-top: 150px;
+            padding-bottom: 50px; position: relative; height: 760px;
+        
+            .orangeBig {
+                z-index: -1;
+                transform: rotate(-30deg); 
+                position: absolute; width: 90px; height: 114px; top: 250px; left: -10px;
+                img {width: 100%; height: 100%;}
+            }
+            .redDot {
+                position: absolute; width: 30px; height: 30px; left: 400px; top: 30%;
+                img {width: 100%; height: 100%;}
+            }
+            .textBox {
+                width: 40%; padding-right: 100px; float: left; opacity: 0; transform: translateY(100px); transition: 0.5s;
+                
+                h4 {
+                    font: bold 14px/50px "Barlow Condensed"; letter-spacing: 5px;
+                }
+                h1 {
+                    margin-top: 21px; margin-bottom: 25px; font: bold 36px/36px "Barlow Condensed"; letter-spacing: 6px;
+                }
+                p {
+                    font: normal 16px/28px "Open Sans"; letter-spacing: normal;
+                }
+                &.eventOn {opacity: 1; transform: translateY(0px);}
+            }
+            .aboutPic {
+                float: right; width: 50%; transform: translateY(-70px);
+                img {width: 100%; height: 100%;}
+            }
+        }
+
+        .countMotion {
+            width: 100%; padding-bottom: 220px;
+            .inner {
+                h2 {
+                    width: 80%; font: normal 29px/35px "Barlow Condensed";
+                    letter-spacing: 3px; text-align: center; margin: 0 auto 70px;
+                }
+                .redDot {
+                    width: 30px; height: 30px; background-color: red; border-radius: 50%;
+                    transform: translate(-100px,-100px); z-index: -1; position: relative; margin-left: auto;
+                }
+                ul {
+                    display: flex; justify-content: space-between;
+
+                    li {
+                        position: relative;
+                        .circleBig {
+                            width: 170px; height: 170px; margin: auto; background: conic-gradient( #3bc4f4 67%, #ddd 33%);
+                            border-radius: 50%; margin-bottom: 20px; position: relative;
+                            .circleSm {
+                                position: absolute; top: 50%; left: 50%; width: 150px; height: 150px;
+                                border-radius: 50%; transform: translate(-50%,-50%); background: #fff;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            .circleBig {
+                                background: conic-gradient( #3bc4f4 80%, #ddd 20%);
+                            }
+                        }
+                        &:nth-of-type(3) {
+                            .circleBig {
+                                background: conic-gradient( #3bc4f4 75%, #ddd 25%);
+                            }
+                        }
+                        &:nth-of-type(4) {
+                            .circleBig {
+                                background: conic-gradient( #3bc4f4 55%, #ddd 45%);
+                            }
+                        }
+
+                        .counter1,
+                        .counter2,
+                        .counter3,
+                        .counter4 {
+                            position: absolute; top: 38%; left: 53%; transform: translate(-50%,-50%); 
+                            font: bold 30px "Barlow Condensed"; letter-spacing: 3px;
+                        }
+                        .data {
+                            width: 100%; display: block; font: normal 20px "Barlow Condensed";
+                            letter-spacing: 3px; text-align: center; 
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .team {
+            width: 100%; position: relative;
+            .orangeBg {
+                width: 540px; height: 650px; position: absolute; top: -252px;
+                left: -255px; z-index: -1;
+                img {width: 100%; height: 100%;}
+            }
+            .video {
+                width: 100%; height: 520px; transform: translate3d(30%, 50%,0); transition: 0.5s;
+                 margin: 140px 0; background: #fff; z-index: 0; opacity: 0;
+
+                iframe {border: none;}
+            }
+            .orangeSmall {
+                position: absolute; top: 45px; left: 65px; width: 30px; height: 30px;
+                img {width: 100%; height: 100%;}
+            }
+            .orange1 {
+                position: absolute; left: -230px; top: -240px; width: 530px; height: 514px;
+                img {width: 100%; height: 100%;}
+            }
+            .orange2 {
+                position: absolute; width: 70px; height: 80px; transform: rotate(80deg);
+                right: -40px; top: 440px; z-index: -1;
+                img {width: 100%; height: 100%;}
+            }
+            .textBox {
+                padding-bottom: 50px; width: 100%;
+
+                h4 {
+                    font: bold 13px/60px "Barlow Condensed"; letter-spacing: 5px;
+                    margin-bottom: 11px;
+                }
+                h1 {
+                    font: bold 35px/55px "Barlow Condensed"; letter-spacing: 3px; 
+                }
+                p {
+                    width: 50%; position: absolute; right: 0; margin-top: -30px;
+                    font: normal 14px/30px "Open Sans"; letter-spacing: 1px;
+                }
+            }
+            figure {
+                width: 100vw; transform: translateX(-40px);
+                .swiper {
+                    display: flex; margin-top: 150px; width: 100%; position: relative; height: 100%;
+                    
+                    .swiper-button-prev {opacity: 0;}
+                    .swiper-button-next {opacity: 0;}
+                    .swiper-pagination {
+                        left: -15%;
+                    }
+                    .swiper-slide {
+                        width: 380px; height: 100%; position: relative;
+
+                        .teamItem {
+                            width: 100%; background: #f5f8fb; position: relative;
+                            transition: 0.5s;
+                            &::before {
+                                content: "";
+                                display: block;
+                                padding-top: 100%;
+                            }
+                            
+                            .titleSmall {
+                                position: absolute; top: 20px; left: 20px;  
+                                span {
+                                    display: block; opacity: 0; transform: translateY(-50%) ;
+                                    font: bold 15px/20px "Barlow Condensed"; 
+                                    letter-spacing: 1.2px; 
+                                }
+                            }
+                            img {
+                                position: absolute; left: 0; bottom: 0; width: 85%; max-height: 95%;
+                            }
+                            &:hover {
+                                background: #fff; 
+                                .titleSmall span {
+                                    opacity: 1; transform: translateY(0);
+                                    transition: 0.5s;
+                                    &:last-child{transition-delay: 0.2s;}
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+            
+        }
+    }
+}
+
+
+@media screen and(max-width : 1223px) {
+    .aboutUs {
+        width: 100%; padding: 100px 0 130px;
+    
+        .inner {
+            width: 568px; position: relative; margin: 0 auto; 
+        
+            .about {
+                padding-top: 0px;
+                padding-bottom: 80px; position: relative; height: auto;
+            
+                .orangeBig { left: 10%; z-index: -1;}
+                .redDot { z-index: -1; }
+                .textBox {
+                    width: 80%; padding-right: 0px; float: none;
+                    margin: 0 auto;
+                }
+                .aboutPic {
+                    float: none; width: 75%; transform: translateY(0px);
+                    margin: 0 auto; padding-top: 50px;
+                }
+            }
+    
+            .team {
+                width: 100%; position: relative;
+                .orangeBg { left: -9999px;}
+                .video {
+                    width: 100%; height: 520px; transform: translateY(-30px);
+                     margin: 140px 0;background: #fff;
+                }
+                .orangeSmall { left: -99999px; }
+                .orange1 {left: -99999px; }
+                .orange2 {left: -99999px;}
+                .textBox {
+                    padding-bottom: 50px; width: 100%;
+    
+                    p {  width: 100%; margin: 20px 0;}
+                }
+                
+            }
+
+            .countMotion {
+                .inner {
+                    ul {
+                        flex-wrap: wrap;
+                        li {
+                            width: 50%;
+                            &:nth-of-type(3),
+                            &:nth-of-type(4) { margin-top: 50px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 660px) {
+    .aboutUs {
+        .inner {
+            width: 100%; 
+            .about {
+                .redDot { left: 300px; }
+            }
+    
+            .team {
+                width: 100%; position: relative;
+                .video {
+                    width: 90%; height: 420px; transform: translateY(-30px);
+                     margin: 140px auto;  background: #fff;
+                }
+                .textBox {
+                    padding-bottom: 50px; width: 90%; margin: 0 auto;
+    
+                    p {  width: 90%; margin: 20px auto; right: auto;}
+                }
+                .swiper {
+                    width: 250%;  margin-top: 200px; transform: translateX(0px);
+                    
+                    li {
+                        width: 250px; height: 260px; 
+                        img { width: 100%; height: 100%;}
+                    }
+                }
+            }
+            .countMotion {
+                .inner {
+                    ul {
+                        li {
+                            width: 90%; margin: 0 auto;
+                            &:nth-of-type(2) { margin-top: 50px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

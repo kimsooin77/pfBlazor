@@ -1,0 +1,30 @@
+.loadState {
+    width: 100%; height: 100vh; position: fixed; overflow: hidden; top: 0; left: 0;
+    z-index: 999; display: flex; align-items: center; justify-content: center;
+    background: rgb(255,170,0);
+    .preLoadBg {    
+        position: absolute; width: 100%; height: 100%; background: #191136;
+        z-index: -1;
+    }
+    .preContent {
+        width: 400px; height: 320px; display: flex; align-items: center;
+        justify-content: center; 
+        img {width: 100px; height: 100px; }
+        .logotxt { 
+            color: #fff;
+            width: 200px; padding-left: 30px; 
+            h2 { font-size: 30px; line-height: 25px; }
+            p {font-size: 20px; font-weight: 300; line-height: 20px;}
+            span {font-size: 12px; display: block; line-height: 12px; font-weight: 300; margin-top: -1px; }
+    
+    
+        }
+    }
+    .preOveray {
+        position: absolute; top: 100%; width: 100%; height: 100%; background: orange;
+        left: 0; transform: translateY(-20px);
+        transform: translate(-100%,-20px);
+        transition: transform 1.5s ease-in-out;
+    }
+
+}

@@ -1,0 +1,91 @@
+.topbar {
+    position: absolute; top: 40px; left: 60px; width: 200px; height: 75px;
+    cursor: pointer; z-index: 990; color: #fff; box-sizing: border-box;
+    .wrap {
+        position:fixed;  display: flex; align-items: center; width: 200px;
+        img {width: 35%; height: 100%; }
+        .logotxt {
+            width: 65%; padding-left: 10px; 
+            h2 { font-size: 13px; line-height: 13px; }
+            p {font-size: 13px; font-weight: 300; line-height: 12px;}
+            span {font-size: 5px; display: block; line-height: 10px; font-weight: 300; margin-top: -1px; }
+        }
+    }
+} 
+
+.fixMenu {
+    width: 100px; position: fixed; right: 0; bottom: 60px; top: 120px; display: flex;
+    flex-direction: column; align-items: center; justify-content: space-between;
+    padding: 50px 0 70px; z-index: 99;
+
+    li {
+        color: #999; width: 100%; letter-spacing: 2.1px; cursor: pointer; text-align: center;
+        font: 16px "Barlow Condensed";
+
+        &.on { color: #fff;}
+        &.darkOn { color: #000;}
+    }
+}
+.pageLine {
+    position: absolute; position: fixed; top: 0; right: 100px; width: 2px; height: 100vh;
+    background: #fff; z-index: 99;
+}
+.showMenu {
+    position: fixed; right: 42px; top: 56px; height: 20px; width: 20px; background: none; 
+    outline: none; border: none; cursor: pointer; z-index: 101; display: none;
+    
+    span {
+        width: 100%; display: block; height: 2px; background: #000; 
+        
+
+        &::before {
+            content: ""; width: 100%; height: 2px; display: block; position: absolute; top: 0;
+            left: 0; background: #000; 
+        }
+        &::after {
+            content: ""; width: 100%; height: 2px; display: block; position: absolute; bottom: 0;
+            left: 0; background: #000;
+        }
+    }
+}
+.hideMenu {
+    position: fixed; right: 42px; top: 56px; width: 20px; height: 20px; background: none;
+    outline: none; border: none; cursor: pointer; z-index: 101; display: none;
+    span {
+        width: 100%; 
+
+        &::before {
+            content: ""; width: 100%; height: 2px; display: block; position: absolute; left: 0; top: calc(50% - 1px);
+            transform:rotate(45deg); transition: 0.5s; background: #fff;
+            
+        }
+        &::after {
+            content: ""; width: 100%; height: 2px; display: block; position: absolute; left: 0; bottom: calc(50% - 1px);
+            transform:rotate(-45deg); transition: 0.5s; background: #fff;
+        }
+    }
+}
+.headerMenuMo {
+    z-index: 100; width: 100%; height: 100vh; display: flex; flex-direction:column;
+    justify-content: center; align-items: center; background: #191136; 
+    position: fixed; right: -100%; top: 0;
+    li {
+         color: #fff; font: bold 15px/1.4 "Barlow Condensed"; letter-spacing: 2.1px; padding-bottom: 4px;
+            cursor: pointer;
+        &:nth-of-type(1) { margin-left: 0;}
+    }
+}
+
+@media screen and(max-width : 1223px) {
+.showMenu { right: 30px; display: block; }
+.hideMenu {right: 30px; display: block;}
+.fixMenu {width: 80px; }
+
+}
+
+@media screen and(max-width : 660px) {
+    .topbar { left: 22px; top: 48px;}
+    .fixMenu {width: 80px; right: -9999px; opacity: 0; }
+    .hambergerMenu { right: 30px; }
+    .pageLine { display: none;}
+}

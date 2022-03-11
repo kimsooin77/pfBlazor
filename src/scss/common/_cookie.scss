@@ -1,0 +1,32 @@
+.popUp {
+    width: 100%; height: 100vh; background: rgba(0,0,0,0.5); position: absolute; top: 0;
+    display: none;
+    .inner {
+        width: 350px;box-sizing: border-box; background-color: #fa0; margin: 0 auto;
+        text-align: center; padding: 40px 20px; position: relative; transform: translateY(150px);
+        .logoPic {
+            width: 80px; position: absolute; top: -31px; left: 50%; transform: translateX(-50%) rotate(20deg);
+        }
+
+        h1 {
+            font: bold 30px/1.8 "Barlow Condensed"; letter-spacing: 1px; margin: 10px auto;
+        }
+        span {
+            display: block; width: 93%; margin: 0 auto; margin-top: 10px;
+            font: normal 15px/1.5 "Open Sans";
+        }
+        .closeBtn {
+            position: absolute; top: 30px; right: 30px; font-weight: bold; color: #fff; cursor: pointer;
+            transition: 0.3s;
+            &:hover {color: #1e1541;}
+        }
+        .wrap {
+            margin-top: 20px;
+            label {
+                margin-left: 15px; font: normal 14px/1 "Barlow Condensed";
+            }
+        }
+    }
+    &.on{display: block;}
+    &.off {display: none;}
+}

@@ -1,0 +1,19 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Open+Sans:wght@300&display=swap');
+
+@import './common/loading';
+@import './common/reset';
+
+@import './common/header';
+@import './common/cookie';
+
+@import './main/services';
+@import './main/school';
+@import './main/aboutUs';
+@import './main/partners';
+@import './main/career';
+@import './main/contactUs';
+@import './main/btns';
+
+@import './common/footer';
+

@@ -1,0 +1,160 @@
+.services {
+    padding: 200px 0 0; position: relative; background: var(--bgColor);
+    width: 100%; transition: all 0.6s; color: var(--textColor);
+
+    --bgColor : #fff;
+    --textColor : #000;
+
+    &.dark {
+        --bgColor : #191136;
+        --textColor : #fff;
+    }
+    
+    .inner {
+        width: 1024px; margin: 0 auto; padding-bottom: 40px;
+        
+        .textbox {
+            margin-bottom: 100px; max-width: 50%; position: relative;
+            opacity: 0; transform: translateY(100px); transition: 0.5s;
+
+            &.eventOn {opacity: 1; transform: translateY(0px);}
+
+            h4 {
+                font: bold 14px/50px "Barlow Condensed"; letter-spacing: 5px;
+            }
+            h1 {
+                padding-top: 21px; font: normal 36px/40px "Barlow Condensed";
+                letter-spacing: 5px; padding-bottom: 25px; font-weight: 500; 
+            }
+            p {
+                font: normal 16px/28px "Open Sans"; font-weight: 300; letter-spacing: normal;
+            }
+            .blueDot {
+                position: absolute; top: 63px; left: -30px; width: 81px; height: 39px; z-index: -1;
+
+                img {width: 100%; height: 100%;}
+            }
+            .orangeDot {
+                position: absolute; width: 30px; height: 30px; top: 222px; left: 140px; z-index: -1;
+                img {width: 100%; height: 100%;}
+            }
+        }
+
+        .theme {
+            margin-left: auto; display: flex; align-items: center; width: fit-content;
+            transform: translateY(-300px);
+            button {
+                display: flex; width: 60px; height: 35px; margin-right: 20px; border-radius: 100px;
+                border: none; cursor: pointer; position: relative; background-color: cornflowerblue;
+                &::after {
+                    content: ""; position: absolute; right: 4px; top: 4px; width: 28px; height: 28px; border-radius: 100px;
+                    background: #ffab00;
+                }
+                &.dark::after {
+                    right: 28px;
+                }
+            }
+            span { font: bold 17px/1 "Barlow Condensed"; letter-spacing: 2px;}
+        }
+
+        .content {
+            width: 100%; display: flex; flex-wrap: wrap; flex-direction: row;
+            justify-content: flex-start; 
+
+            article {
+                width: 28%; margin-bottom: 65px; 
+
+                .pic {
+                    width: 60px; height: 60px; margin-bottom: 30px;
+                    img {width: 100%; height: 100%;}
+                }
+                strong {
+                    display: block; margin-bottom: 20px; font: bold 20px/30px "Barlow Condensed"; letter-spacing: 1.2px;
+                }
+                p {
+                    font: normal 14px/28px "Open Sans"; letter-spacing: 0.8px; 
+                }
+                
+                &:nth-of-type(2),
+                &:nth-of-type(5),
+                &:nth-of-type(8) {
+                    padding: 0 80px;
+                }
+                &:nth-of-type(3) {
+                    .pic {width: 80px; height: 40px;}
+                }
+                
+            }
+        }
+    }
+    .page2Bottom {
+        width: 100%; display: block; transform: translateY(5px);
+        img {width: 100%; height: 100%;}
+    }
+}
+
+
+@media screen and(max-width : 1223px) {
+    .services {
+        padding: 90px 0 0; position: relative;
+        width: 100%;
+    
+        .inner {
+            width: 568px; padding-bottom: 40px;
+            
+            .textbox { max-width: 100%; }
+            .theme {transform: translate(100px, -400px);}
+    
+            .content {
+    
+                article {
+                    width: 44%; margin-bottom: 65px; box-sizing: border-box;
+    
+    
+                    &:nth-of-type(2),
+                    &:nth-of-type(4),
+                    &:nth-of-type(6),
+                    &:nth-of-type(8) {
+                        padding-left: 50px;
+                        padding-right: 0;
+                    }
+                    &:nth-of-type(5) {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 660px) {
+    .services {
+        padding: 90px 0 0; position: relative;
+        width: 100%;
+    
+        .inner {
+            width: 90%; position: relative;
+            .theme {
+                transform: translate(0px, -0px);
+                position: absolute; top: 0px; right: 0px;
+            }
+    
+            .content {
+                padding-left: 20px;
+                
+                article {
+                    width: 90%; margin-bottom: 65px; box-sizing: border-box;
+    
+                    &:nth-of-type(2),
+                    &:nth-of-type(4),
+                    &:nth-of-type(6),
+                    &:nth-of-type(8) {
+                        padding: 0px;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}

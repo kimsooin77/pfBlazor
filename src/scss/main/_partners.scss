@@ -1,0 +1,170 @@
+.partners {
+     width: 100%; 
+
+    .inner {
+        width: 1024px; margin: 0 auto; padding-bottom: 200px; position: relative;
+
+        .orangePic {
+            width: 140px; height: 120px; z-index: -1; position: absolute; left: 30%; top: 80px;
+            img {width: 100%; height: 100%;}
+        }
+        .textBox {
+            width: 100%; opacity: 0; transform: translateY(100px); transition: 1s;
+
+            h4 {
+                font: bold 13px/60px "Barlow Condensed"; letter-spacing: 5px;
+                margin-bottom: 11px; width: 50%;
+            }
+            h1 {
+                font: bold 35px/55px "Barlow Condensed"; letter-spacing: 3px; width: 50%;
+            }
+            p {
+                width: 50%; position: absolute; right: 0; margin-top: -100px;
+                font: normal 14px/30px "Open Sans"; letter-spacing: 1px; width: 50%;
+            }
+            &.eventOn {
+                opacity: 1; transform: translateY(0px);
+            }
+        }
+    }
+
+    .purpleBox {
+        width: 100%; padding-bottom: 100px; background: #191136;
+        position: relative;
+        &::before {
+            z-index: 1; content: ""; display:  block; position: absolute;
+            width: 100%; height: 180px; background: #fff;
+        }
+        .innerBox {
+            position: relative; width: 1124px; padding: 150px; z-index: 2; margin: 0 auto;
+            background: #1e1541; box-sizing: border-box;  padding-bottom: 100px;
+
+            .slider {
+                width: 1720px;  display: flex; justify-content: flex-start; align-items: center;
+
+                .page1,.page2 { 
+                    width: 860px; display: flex; flex-wrap: wrap; margin-left: 30px;
+                    position: relative; top: 0; left: 0;
+                    transition: opacity 0.6s ease-in 0s;
+                    article {
+                        width: 25%; height: 140px; display: flex; justify-content: center; align-items: center;
+                        position: relative; border: 1px solid #382879; box-sizing: border-box;
+
+                        .leftTop {
+                            position: absolute; top: 0 ; left: 0; width: calc(100% + 2px); height: calc(100% + 2px);
+                            z-index: 3; overflow: hidden;
+
+                            &::before,
+                            &::after {
+                                content: ""; display: block; position: absolute; top: 0; left: 0;
+                                background: #fff; 
+                                transition: transform 1s cubic-bezier(0.19,1,0.22,1);
+                            }
+                            &::before {width: 100%; height: 2px; transform: translateX(-110%); }
+                            &::after { width: 2px; height: 100%; transform: translateY(-110%);}
+                        }
+                        .rightBottom {
+                            position: absolute; bottom: -2px; right: -2px; width: calc(100% + 2px); height: calc(100% + 2px); z-index: 3;
+                            overflow: hidden; 
+                            &::before,
+                            &::after {
+                                content: ""; display: block; position: absolute; bottom: 0; right: 0;
+                                background: #fff; 
+                                transition: transform 1s cubic-bezier(.19,1,.22,1);
+                            }
+                            &::before {width: 100%; height: 2px; transform: translateX(110%); }
+                            &::after { width: 2px; height: 100%; transform: translateY(110%);}
+
+                        }
+
+                        &:hover {
+                            .leftTop {
+                                &::before,&::after {transform: none;}
+                            }
+                            .rightBottom {
+                                &::before,&::after {transform: none;}
+                            }
+                        }
+                        img { max-width: 55%; max-height: 45%;}
+                    } 
+                }
+                .page2 {
+                    left: -860px; top: 0; padding: 0; opacity: 0;
+                }
+                
+            }
+
+            .dots {
+                width: 100%; display: flex; margin: 0 auto; justify-content: center;
+                margin-top: 80px;
+
+                li {
+                    width: 10px; height: 10px; border-radius: 50%; box-sizing: border-box;
+                    margin-left: 12px; background: #fff; cursor: pointer;
+
+                    &:nth-of-type(2) {opacity: 0.2;}
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and(max-width : 1223px) {
+    .partners {
+        width: 100%; 
+   
+       .inner {
+           width: 568px;
+   
+           .orangePic { width: 100px; height: 80px; left: 0; }
+           .textBox {
+               width: 100%; 
+               p { width: 100%;  margin-top: 0px; }
+           }
+       }
+   
+       .purpleBox {
+           
+           &::before { display:  none; }
+           .innerBox {
+               position: relative; width: 100%; padding: 100px; z-index: 2; margin: 0 auto;
+               
+               .slider {
+                   width: 180%;  
+                 .page1 {  width: 90%; margin-left: 0px; }
+                 .page2 {width: 90%; left: -50%; margin-left: 0;}
+                }
+           }
+       }
+   }
+}
+
+@media screen and (max-width : 660px) {
+    .partners {
+        width: 100%; 
+   
+       .inner {  width: 90%; }
+   
+       .purpleBox {
+           
+           .innerBox {
+               position: relative; width: 100%; padding: 100px 30px; z-index: 2; margin: 0 auto;
+               
+               .slider {
+                    width: 170%;  
+                    .page1 {  
+                        width: 85%;
+                     article {width: 50%;}
+                    }
+                    .page2 {
+                        width: 85%;
+                        article {width: 50%;}
+                    }
+                }
+           }
+       }
+   }
+}
+

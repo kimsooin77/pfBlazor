@@ -1,0 +1,215 @@
+.career {
+    padding-bottom: 200px; width: 100%; position: relative; background: #191136;
+    
+
+    .inner {
+        width: 1024px; margin: 0 auto; position: relative;
+
+        .careerBox {
+            box-sizing: border-box; height: 520px;
+            .orangePic {
+                width: 140px; height: 125px; position: absolute;
+                left: -50px; top: 40px; z-index:0;
+                img {width: 100%; height: 100%;}
+            }
+            .orangeCircle {
+                position: absolute; top: 140px; right: 60px; display: block;
+                width: 100px; height: 100px; border-radius: 50%; background: rgb(255, 170, 0);
+    
+            }
+            .textBox {
+                width: 43%; color: #fff; padding: 40px 0 100px; position: relative;
+                opacity: 0; transform: translateY(100px); transition: 1s;
+                &.eventOn {opacity: 1; transform: translateY(0px);}
+                h4 {
+                    z-index: 1;
+                    font: bold 13px/60px "Barlow Condensed"; letter-spacing: 5px;
+                    padding-bottom: 11px;
+                }
+                h1 {
+                    z-index: 1;
+                    font: bold 35px/55px "Barlow Condensed"; letter-spacing: 3px; 
+                }
+            }
+            .pBox {
+                p {
+                    color: #fff;
+                    width: 48%; position: absolute; right: 0; top: 100px;
+                    font: normal 13px/30px "Open Sans"; letter-spacing: 1px;
+                }
+                .p2 {
+                    top: 400px;
+                }
+            }
+        }
+
+        
+
+        .jobBox {
+            margin-top: 110px; box-sizing: border-box; width: 100%; color: #fff;
+
+            h1 {
+                font: bold 20px/60px "Barlow Condensed"; letter-spacing: 6.5px;
+            }
+            .wrap {
+                padding-top: 27px; width: 100%;
+
+                article {
+                     width: 100%;  padding: 18px 30px 18px 0; 
+                    .jobHead {
+                        width: 100%; display: flex; flex-direction: row; align-items: center;
+                        .pic {
+                            width: 100px; padding-right: 50px; 
+                            img {
+                                max-width: 60px;
+                            }
+                        }
+                        p {
+                            width: 350px; padding-right: 100px; font: bold 14px/60px "Barlow Condensed"; letter-spacing: 5px;
+                        }
+                        >span {
+                            width: 510px; padding-right: 110px; font: normal 12px/20px "Barlow Condensed"; letter-spacing: 5px;
+                        }
+                        .icon {
+                            width: 160px; width: 60px; height: 50px; background: rgba(187, 187, 187, 0.315); border-radius: 50%; 
+                            box-sizing: border-box; text-align: center; cursor: pointer; position: relative;
+                            transition: 0.5s;
+                            span {
+                                 font: bold 24px/50px "arial";
+                                 color: #fff; z-index: 4; display: block;
+                                
+                            }
+
+                            &:hover {
+                                background: #fff;
+                                span {color: #191136;}
+                            }
+                        }
+                    }
+                    
+                    .answerBox {    
+                        width: 100%; display: block;
+                        padding: 16px 110px 18px 0; box-sizing: border-box; display: none;
+                        transition: display 0.6s;
+                        p {
+                            opacity: 0.8; font: normal 14px/30px "Open Sans"; 
+                            letter-spacing: 1px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scale1{
+    from {
+        transform : scale(0)
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media screen and(max-width : 1223px) {
+    .career {
+        padding-bottom: 200px; width: 100%; position: relative; background: #191136;
+        
+        .inner {
+            width: 568px;
+    
+            .careerBox {
+                box-sizing: border-box; height: auto;
+                .orangePic {  width: 100px; height: 85px; }
+                .orangeCircle { width: 50px; height: 50px; }
+                .textBox { width: 100%;  padding: 40px 0 50px; }
+                .pBox {
+                    width: 100%;
+                    p {
+                        width: 100%; position: inherit; 
+                    }
+                    .p2 {
+                        margin-top:30px;
+                    }
+                }
+            }
+    
+            .jobBox {
+                
+                .wrap {
+                    padding-top: 27px; width: 100%;
+                    
+                        article {
+                            padding: 18px 0px 18px 0; 
+                            .jobHead {
+                                .pic {
+                                    width: 70px; padding-right: 50px; 
+                                }
+                                p {
+                                    width: 350px; padding-right: 40px; font: bold 14px/20px "Barlow Condensed"; letter-spacing: 5px;
+                                }
+                                >span {
+                                    width: 270px; padding-right: 10px; font: normal 12px/20px "Barlow Condensed"; letter-spacing: 5px;
+                                }
+                                .icon {
+                                    width: 160px; width: 60px; height: 40px; 
+                                    span {
+                                         font: bold 24px/40px "arial";
+                                    }
+                                }
+                            }
+                            .answerBox {
+                                width: 90%;
+                                padding-right: 0px;
+                            }
+                        }
+                    
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 660px) {
+    .career {
+        padding-bottom: 200px; width: 100%; position: relative; background: #191136;
+        
+        .inner {
+            width: 90%;
+    
+            .careerBox {
+                .orangePic {  left: 0; }
+            }
+    
+            .jobBox {
+                .wrap {
+                    padding-top: 27px; width: 100%;
+    
+                    article {
+                        padding: 18px 0px 18px 0; 
+                        .jobHead {
+                            width: 85%;
+                            .pic {
+                                display: none;
+                            }
+                            >span {
+                                display: none;
+                            }
+                            .icon {
+                                width: 160px; width: 50px; height: 40px; 
+                                span {
+                                     font: bold 20px/40px "arial";
+                                }
+                            }
+                        }
+                        .answerBox {
+                            width: 80%;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "list" : [
+        {
+            "pic" : "jobList1",
+            "position" : "TOWER FOREMAN",
+            "partTime" : "DABBY. PA. USA PARMANENT · FULL·TIME",
+            "icon" : "+",
+            "text" : "Previous foreman experience of at least 3 years. Ability run 3-4men crew safely and efficiently. Bonus program offered for efficient work of the crew. Competitive rates and benefits, Please contact for more details."
+        },
+        {
+            "pic" : "jobList2",
+            "position" : "TOWER TOP HAND",
+            "partTime" : "DABBY. PA. USA PARMANENT · FULL·TIME",
+            "icon" : "+",
+            "text" : "Required experience is 2+ years on the tower. Understand and strictly adhere to safety and quality guidelines. Bonus program offered for efficient work of the crew. Competitive rates and benefits, Please contact for more details."
+        },
+        {
+            "pic" : "jobList3",
+            "position" : "TOWER TECHNICAL CIVIL",
+            "partTime" : "DABBY. PA. USA PARMANENT · FULL·TIME",
+            "icon" : "+",
+            "text" : "Belazor Technologies, Inc is looking for non-climbing position of civil tower workers for work at tower job sites.Required experience is 2+ years on the tower. Understand and strictly adhere to safety and quality guidelines. Bonus program offered for efficient work of the crew. Competitive rates and benefits, Please contact for more details."
+        }
+    ]
+}
