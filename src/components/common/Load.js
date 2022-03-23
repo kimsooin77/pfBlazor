@@ -8,13 +8,12 @@ function Load() {
 
     useEffect(() => {
         preOveray.current.style.transform = "translateX(100%)";
-    },[])
 
-    useEffect(() => {
         setTimeout(()=> {
             setLoading(false)
         },1500);
     },[])
+
 
     return(
         <>

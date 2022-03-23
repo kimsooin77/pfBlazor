@@ -76,7 +76,7 @@ function Partners () {
                                         <article key={index}>
                                             <span className="leftTop"></span>
                                             <span className="rightBottom"></span>
-                                            <img src={`${path}/pic/${item.name}.png`} />
+                                            <img alt="partners1" src={`${path}/pic/${item.name}.png`} />
                                         </article>
                                     )
                                 })
@@ -90,7 +90,7 @@ function Partners () {
                                         <article key={index}>
                                             <span className="leftTop"></span>
                                             <span className="rightBottom"></span>
-                                            <img src={`${path}/pic/${item.name}.png`} />
+                                            <img alt="partners2" src={`${path}/pic/${item.name}.png`} />
                                         </article>
                                     )
                                 })

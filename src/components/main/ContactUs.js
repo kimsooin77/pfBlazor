@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 function ContactUs() {
 
     const path = process.env.PUBLIC_URL;
-    const page7Top = `${path}/pic/page6Bottom.jpg`;
+    const page7Top = `${path}/pic/page6Bottom.JPG`;
     const frame = useRef(null);
     
     const {kakao} = window;

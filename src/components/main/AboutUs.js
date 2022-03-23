@@ -12,7 +12,7 @@ function AboutUs() {
     const path = process.env.PUBLIC_URL;
     const orangeBig = `${path}/pic/orangeBig.png`;
     const redDot = `${path}/pic/redDot.png`;
-    const aboutPic = `${path}/pic/aboutPic.JPG`;
+    const aboutPic = `${path}/pic/aboutPic.jpg`;
     const orangeBg = `${path}/pic/aboutBg.png`;
     const orangeSmall = `${path}/pic/orangeDot.png`;
     const orange1 = `${path}/pic/orange1.png`;

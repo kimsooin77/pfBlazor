@@ -5,10 +5,9 @@ function Header(props) {
 
     const path = process.env.PUBLIC_URL;
     const duckPic = `${path}/pic/headerDuckPic.png`;
-    const badgePic = `${path}/pic/headerBadgePic.png`
-    const headerBottom = `${path}/pic/headerBottom.jpg`
+    const badgePic = `${path}/pic/headerBadgePic.png`;
+    const headerBottom = `${path}/pic/headerBottom.jpg`;
 
-    
     
     const frame = useRef(null);
     
