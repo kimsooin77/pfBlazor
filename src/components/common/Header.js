@@ -75,7 +75,7 @@ function Header(props) {
                 </ul>
                 
 
-                <div className="inner scrollEvent"  ref={frame}>
+                <div className="inner scrollEvent eventOn"  ref={frame}>
                     <div className="txtBox">
                         <h4>WELCOME</h4>
                         <h1>Belazor Technologies, Inc - is the pride of wireless construction.</h1>

@@ -1,8 +1,8 @@
 {
-  "homepage": "https://github.com/kimsooin77/pf_blazor/",
+  "homepage": "https://kimsooin77.github.io/pfBlazor/",
   "name": "portfolio3",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

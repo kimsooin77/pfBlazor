@@ -14,7 +14,7 @@ function ContactUs() {
     const info = [
         {
             title : "Company",
-            latlng : new kakao.maps.LatLng(37.5284304,126.7930024),
+            latlng : new kakao.maps.LatLng(37.5284304, 126.7930024),
             imgSrc : process.env.PUBLIC_URL+"/pic/marker1.png",
             imgSize : new kakao.maps.Size(100,90),
             imgPos : {offset : new kakao.maps.Point(60,60)}
