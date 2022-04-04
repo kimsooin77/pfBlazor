@@ -14,7 +14,7 @@
         width: 1024px; margin: 0 auto; padding-bottom: 40px;
         
         .textbox {
-            margin-bottom: 100px; max-width: 50%; position: relative;
+            margin-bottom: 100px; max-width: 50%; position: relative; padding-left: 20px;
             opacity: 0; transform: translateY(100px); transition: 0.5s;
 
             &.eventOn {opacity: 1; transform: translateY(0px);}

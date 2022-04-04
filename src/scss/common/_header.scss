@@ -7,7 +7,7 @@ header {
     
     .cloud {
         width: 100%; height: 100%; position: absolute; top: 0; left: 0;
-        z-index: 5;
+        z-index: 5; overflow: hidden;
 
         &::before {
             content: "";
@@ -70,7 +70,7 @@ header {
     
 
     .inner {
-        width: 1024px; margin: 0 auto; height: 290px; transform: translateY(330px);
+        width: 1024px; margin: 0 auto; transform: translateY(330px);
         position: relative; z-index: 10; opacity: 0; transition: 1s;
         .txtBox {
             width: 512px; 
@@ -87,7 +87,7 @@ header {
                 letter-spacing: 1px;
             }
         }
-        &.eventOn {opacity: 1; transform: translateY(230px);}
+        &.eventOn {opacity: 1; transform: translateY(170px);}
     }
     
     .badge {
@@ -97,7 +97,7 @@ header {
     }
     .duckPic {
         position: absolute; bottom: 0; top: calc(100vh - 250px); width: 640px;
-        height: 270px; right: 0; z-index: 97;
+        height: 270px; right: 0; z-index: 5;
     }
 
     &::after {

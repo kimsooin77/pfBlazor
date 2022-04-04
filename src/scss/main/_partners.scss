@@ -121,12 +121,16 @@
            .orangePic { width: 100px; height: 80px; left: 0; }
            .textBox {
                width: 100%; 
-               p { width: 100%;  margin-top: 0px; }
+               h1 {width: 90%;}
+               p {
+                   width: 100%;
+                position: relative; right: auto; margin-top: 10px;
+            }
            }
        }
    
        .purpleBox {
-           
+           margin-top: -2px;
            &::before { display:  none; }
            .innerBox {
                position: relative; width: 100%; padding: 100px; z-index: 2; margin: 0 auto;
@@ -145,13 +149,19 @@
     .partners {
         width: 100%; 
    
-       .inner {  width: 90%; }
+       .inner {  
+           width: 90%; 
+           .textBox {
+               
+           }
+        
+        }
    
        .purpleBox {
            
            .innerBox {
                position: relative; width: 100%; padding: 100px 30px; z-index: 2; margin: 0 auto;
-               
+               overflow: hidden;
                .slider {
                     width: 170%;  
                     .page1 {  

@@ -203,7 +203,7 @@
                 .redDot { z-index: -1; }
                 .textBox {
                     width: 80%; padding-right: 0px; float: none;
-                    margin: 0 auto;
+                    margin: 0 auto; 
                 }
                 .aboutPic {
                     float: none; width: 75%; transform: translateY(0px);
@@ -223,13 +223,16 @@
                 .orange2 {left: -99999px;}
                 .textBox {
                     padding-bottom: 50px; width: 100%;
-    
-                    p {  width: 100%; margin: 20px 0;}
+
+                    h4 {padding-left: 17px;}
+                    h1 {padding-left: 17px;}
+                    p {  width: 100%; margin: 20px 0; position: relative;}
                 }
                 
             }
 
             .countMotion {
+                padding-bottom: 100px;
                 .inner {
                     ul {
                         flex-wrap: wrap;
@@ -257,21 +260,19 @@
                 width: 100%; position: relative;
                 .video {
                     width: 90%; height: 420px; transform: translateY(-30px);
-                     margin: 140px auto;  background: #fff;
+                     margin: 40px auto;  background: #fff;
                 }
                 .textBox {
                     padding-bottom: 50px; width: 90%; margin: 0 auto;
     
                     p {  width: 90%; margin: 20px auto; right: auto;}
                 }
-                .swiper {
-                    width: 250%;  margin-top: 200px; transform: translateX(0px);
-                    
-                    li {
-                        width: 250px; height: 260px; 
-                        img { width: 100%; height: 100%;}
+                figure {
+                    .swiper {
+                        margin-top: 0px; 
                     }
                 }
+                
             }
             .countMotion {
                 .inner {
