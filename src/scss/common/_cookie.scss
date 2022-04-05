@@ -30,3 +30,12 @@
     &.on{display: block;}
     &.off {display: none;}
 }
+
+@media screen and (max-width : 660px) {
+
+    .popUp {
+        .inner {
+            width: 90%;
+        }
+    }
+}

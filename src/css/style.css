@@ -340,6 +340,9 @@ header {
   .popUp.off {
     display: none; }
 
+@media screen and (max-width: 660px) {
+  .popUp .inner {
+    width: 90%; } }
 .services {
   padding: 200px 0 0;
   position: relative;
