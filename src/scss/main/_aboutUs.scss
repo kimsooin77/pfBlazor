@@ -257,7 +257,7 @@
             }
     
             .team {
-                width: 100%; position: relative;
+                width: 100%; position: relative; overflow: hidden;
                 .video {
                     width: 90%; height: 420px; transform: translateY(-30px);
                      margin: 40px auto;  background: #fff;
@@ -268,8 +268,10 @@
                     p {  width: 90%; margin: 20px auto; right: auto;}
                 }
                 figure {
+                    transform: translateX(10px);
                     .swiper {
                         margin-top: 0px; 
+                        .swiper-pagination {left: auto;}
                     }
                 }
                 

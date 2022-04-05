@@ -151,10 +151,6 @@
    
        .inner {  
            width: 90%; 
-           .textBox {
-               
-           }
-        
         }
    
        .purpleBox {
@@ -163,7 +159,7 @@
                position: relative; width: 100%; padding: 100px 30px; z-index: 2; margin: 0 auto;
                overflow: hidden;
                .slider {
-                    width: 170%;  
+                    width: 170%; transform: translateX(20px);
                     .page1 {  
                         width: 85%;
                      article {width: 50%;}

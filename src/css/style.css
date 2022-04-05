@@ -649,8 +649,9 @@ header {
         z-index: 10;
         position: relative; }
       .school .inner .man {
-        width: 70%;
-        height: 400px; }
+        width: 100%;
+        height: 400px;
+        margin-left: 0px; }
       .school .inner .cloud {
         position: absolute;
         left: 43%;
@@ -973,7 +974,8 @@ header {
       left: 300px; }
     .aboutUs .inner .team {
       width: 100%;
-      position: relative; }
+      position: relative;
+      overflow: hidden; }
       .aboutUs .inner .team .video {
         width: 90%;
         height: 420px;
@@ -988,8 +990,12 @@ header {
           width: 90%;
           margin: 20px auto;
           right: auto; }
-      .aboutUs .inner .team figure .swiper {
-        margin-top: 0px; }
+      .aboutUs .inner .team figure {
+        transform: translateX(10px); }
+        .aboutUs .inner .team figure .swiper {
+          margin-top: 0px; }
+          .aboutUs .inner .team figure .swiper .swiper-pagination {
+            left: auto; }
     .aboutUs .inner .countMotion .inner ul li {
       width: 90%;
       margin: 0 auto; }
@@ -1209,7 +1215,8 @@ header {
       margin: 0 auto;
       overflow: hidden; }
       .partners .purpleBox .innerBox .slider {
-        width: 170%; }
+        width: 170%;
+        transform: translateX(20px); }
         .partners .purpleBox .innerBox .slider .page1 {
           width: 85%; }
           .partners .purpleBox .innerBox .slider .page1 article {
