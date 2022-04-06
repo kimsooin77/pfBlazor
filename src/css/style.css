@@ -1220,12 +1220,11 @@ header {
       .partners .purpleBox .innerBox .slider {
         width: 170%;
         transform: translateX(20px); }
-        .partners .purpleBox .innerBox .slider .page1 {
-          width: 85%; }
-          .partners .purpleBox .innerBox .slider .page1 article {
-            width: 50%; }
+        .partners .purpleBox .innerBox .slider .page1,
         .partners .purpleBox .innerBox .slider .page2 {
-          width: 85%; }
+          width: 85%;
+          overflow: hidden; }
+          .partners .purpleBox .innerBox .slider .page1 article,
           .partners .purpleBox .innerBox .slider .page2 article {
             width: 50%; } }
 .career {
